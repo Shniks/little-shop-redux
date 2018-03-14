@@ -12,10 +12,9 @@ RSpec.configure do |c|
   c.include Capybara::DSL
 end
 
-=begin
-DatabaseCleaner.strategy = :truncation #Truncates all data and resets auto ids
+DatabaseCleaner.strategy = :truncation
 
-RSpec.configure do |c| # scrubs the database before and after each test
+RSpec.configure do |c|
   c.before(:all) do
     DatabaseCleaner.clean
   end
@@ -23,5 +22,3 @@ RSpec.configure do |c| # scrubs the database before and after each test
     DatabaseCleaner.clean
   end
 end
-
-=end
