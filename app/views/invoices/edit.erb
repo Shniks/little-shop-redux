@@ -2,11 +2,10 @@
   <h2>Edit Invoice</h2>
   <p> Invoice: <%= invoice.id %> </p>
   <input type='hidden' name='_method' class='input' value='PATCH' /><br/>
-  <label style='padding-right: 44px;'>Invoice ID</label><input type="number" name='invoice[id]' style='width: 300px;' class='input' value="<%= invoice.id %>"/><br/>
   <label style='padding-right: 30px;'>Customer ID</label><input type="number" name='invoice[customer_id]' style='width: 300px;' class='input' value="<%= invoice.customer_id %>"/><br/>
   <label style='padding-right: 31px;'>Merchant ID</label><input type="number" name='invoice[merchant_id]' style='width: 300px;' class='input' value="<%= invoice.merchant_id %>"/><br/>
   <label style='padding-right: 74px;'>Status</label><input type="text" name='invoice[status]' style='width: 300px;' class='input' value="<%= invoice.status %>"/><br/>
   <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= invoice.created_at %>"/><br/>
   <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= invoice.updated_at %>"/><br/>
-  <input type='submit'/>
+  <input id="submit-button" type='submit' value="Submit"/>
 </form>
