@@ -1,7 +1,8 @@
+
 <html>
   <head>
     <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="main.css"  type="text/css" />
+    <link rel="stylesheet" href="/main.css"  type="text/css" />
     <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
   </head>
   <body>
@@ -35,19 +36,21 @@
         </div>
         </div>
       </div>
-      <div class="merchant-div">
-  <% @merchants.each do |merchant| %>
-    <div class="card-2">
-          <div class="container-2">
-       <ul>
-         <li>Id  /  <%= merchant.id %></li>
-         <li>Merchant  /  <%= merchant.name %></li>
-         <li>Created-at  /  <%= merchant.created_at %></li>
-         <li>Updated-at  /  <%= merchant.updated_at %></li>
-       </ul>
-     </div>
-   </div>
- <% end %>
- </div>
- </body>
-</html>
+
+        <div class="container-edit">
+<form action="/items/<%= @item.id %>" method="POST">
+      <p>Edit Item</p>
+      <input type="hidden" name="_method"  class="input" value="PUT" />
+      <input type='number' name='item[id]' style="width: 300px;" class="input" value="<%= @item.id %>"/><br/>
+      <input type='text' name='item[name]' class="input" style="width: 300px;" class="input" value="<%= @item.name %>"/><br/>
+      <input type='text' name='item[description]' class="input" style="width: 300px;" class="input" value="<%= @item.description %>"/><br/>
+      <input type='text' name='item[unit_price]' class="input" style="width: 300px;" class="input" value="<%= @item.unit_price %>"/><br/>
+      <input type='text' name='item[merchant_id]' class="input" style="width: 300px;" class="input" value="<%= @item.merchant_id %>"/><br/>
+      <input type="hidden" name='item[created_at]' class="input" style="width: 300px;" class="input" value="<%= @item.created_at %>"/><br/>
+      <input type="hidden" name='item[updated_at]' class="input" style="width: 300px;" class="input" value="<%= Time.now %>"/><br/>
+      <input type='submit'/>
+    </form>
+
+</div>
+  </body>
+  </html>
