@@ -1,5 +1,14 @@
 describe 'As a user' do
   context 'I visit merchant index page' do
+    it 'I can see all merchants' do
+      Merchant.create(name: 'Tyler')
+      visit '/merchants'
+
+      expect(page).to have_content("Tyler")
+    end
+  end
+
+  context 'I click on the Navbar' do
     it 'I can see navbar links' do
       visit '/merchants'
 
@@ -7,14 +16,7 @@ describe 'As a user' do
       expect(page).to have_content('Home')
       expect(page).to have_content('Items')
       expect(page).to have_content('Merchants')
-      expect(page).to have_content('Invoices')
-    end
-
-    it 'I can see all merchants' do
-      Merchant.create(name: 'Tyler')
-      visit '/merchants'
-
-      expect(page).to have_content("Tyler")
+      # expect(page).to have_content('Invoices')
     end
 
     it 'I can click on new merchant' do
