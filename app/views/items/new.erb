@@ -33,15 +33,6 @@
             <a href="/items/show_input">View an Item</a>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Categories
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/categories/new">Create a New Category</a>
-            <a href="/categories">View All Categories</a>
-          </div>
-        </div>
       </div>
         <div class="container-edit">
 <select name="item[merchant_id]">
@@ -50,7 +41,7 @@
       <% end %>
     </select>
     <br>
-    Enter a item name: <input id="text-box" type="text" name="item[name]"/><br/>
+    Enter a item name: <br><input id="text-box" type="text" name="item[name]"/><br/>
     Enter a item description: <input id="text-box" type="text" name="item[description]"/><br/>
     Enter a item unit-price: <input id="text-box" type="text" name="item[unit_price]"/><br/>
     <input type="hidden" name="merchant[created_at]" value="<%= Time.now %>"/>
