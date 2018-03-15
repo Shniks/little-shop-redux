@@ -1,9 +1,52 @@
 <html>
   <head>
     <title>Little Shop Redux</title>
+    <link rel="stylesheet" href="main.css"  type="text/css" />
+    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
   </head>
-<body>
+  <body>
+    <header>
+      <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
+    </header>
+    <div class="nav"  width="100px">
+      <div class="navbar">
+        <a href="/">Home</a>
+        <div class="dropdown-1">
+          <button class="dropbtn">Merchants
+            <i class="la la bub"></i>
+          </button>
+          <div class="dropdown-content" id="drop-down">
+            <a href="/merchants/new">Create a New Merchant</a>
+            <a href="/merchants/edit_input">Edit a Merchant</a>
+            <a href="/merchants">View All Merchants</a>
+            <a href="/merchants/show_input">View a Merchant</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Items
+            <i class="la la bub"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/items/new">Create a New Item</a>
+            <a href="/items/edit_input">Edit an Item</a>
+            <a href="/items">View All Items</a>
+            <a href="/items/show_input">View an Item</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Categories
+            <i class="la la bub"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/categories/new">Create a New Category</a>
+            <a href="/categories">View All Categories</a>
+          </div>
+        </div>
+      </div>
   <% items.each do |item| %>
+  <div class="card">
+    <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
+    <div class="container">
        <ul>
          <li>Id  /  <%= item.id %></li>
          <li>Item  /  <%= item.name %></li>
@@ -12,8 +55,10 @@
          <li>Merchant ID  /  <%= item.merchant_id %></li>
          <li>Created-at  /  <%= item.created_at %></li>
          <li>Updated-at  /  <%= item.updated_at %></li>
-         <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
        </ul>
+     </div>
+
+   </div>
  <% end %>
  </body>
 </html>
