@@ -35,6 +35,8 @@
         </div>
       </div>
         <div class="container-edit">
+          <p>Enter a new item:</p>
+    <form action="/items" method="post">
 <select name="item[merchant_id]">
       <% @merchants.each do |merchant| %>
       <option value= "<%=merchant.id%>"> <%=merchant.name %> </option>
