@@ -23,4 +23,9 @@ describe 'invoice pathways' do
     visit '/invoices/2'
     expect(page).to have_content('shipped')
   end
+
+  it 'user can edit invoice' do
+    visit '/invoices/1/edit'
+    expect(page).to have_content('shipped')
+  end
 end
