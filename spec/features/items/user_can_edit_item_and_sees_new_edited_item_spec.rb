@@ -7,12 +7,12 @@ describe "user visits items edit page"  do
 
        fill_in("item[name]", with: "toy")
        fill_in("item[unit_price]", with: 2 )
-
-       click_button("Submit")
        save_and_open_page
+       click_button("Submit")
+
        expect(page).to have_content("toy")
        expect(page).to have_content("fun")
-       expect(page).to have_content(2.0)
+       expect(page).to have_content(2)
 
      end
    end
