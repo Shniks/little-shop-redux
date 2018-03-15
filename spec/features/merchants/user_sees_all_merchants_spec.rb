@@ -1,5 +1,5 @@
 describe 'As a user' do
-  describe 'User visits merchant index page' do
+  context 'I visit merchant index page' do
     it 'I can see navbar links' do
       visit '/merchants'
 
