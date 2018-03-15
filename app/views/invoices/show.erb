@@ -51,6 +51,10 @@
     <li>Created-at / <%= invoice.created_at %></li>
     <li>Updated-at / <%= invoice.updated_at %></li>
   </ul>
+  <form method="post" action="/invoices/<%= invoice.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+</form>
 </div>
 </div>
 </div>
