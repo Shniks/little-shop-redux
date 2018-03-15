@@ -1,8 +1,8 @@
 describe 'As a user' do
   context 'I visit a particular merchant\'s page to edit it' do
     it 'I can see navbar links' do
-      Merchant.create(name: 'Tyler')
-      visit '/merchants/1/edit'
+      merchant = Merchant.create(name: 'Tyler')
+      visit "/merchants/#{merchant.id}/edit"
 
       expect(page).to have_content('Home')
       expect(page).to have_content('Items')
@@ -10,11 +10,11 @@ describe 'As a user' do
     end
 
     it 'I can see content in the body' do
-      Merchant.create(name: 'Tyler')
-      visit '/merchants/1/edit'
+      merchant = Merchant.create(name: 'Tyler')
+      visit "/merchants/#{merchant.id}/edit"
 
-      expect(page).to have_content('Tyler')
-      expect(page).to have_content('1')
+      expect(page).to have_content(merchant.name)
+      expect(page).to have_content(merchant.id)
     end
 
     it 'I can see input box to edit merchant' do
