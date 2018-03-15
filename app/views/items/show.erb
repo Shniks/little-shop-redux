@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="main.css"  type="text/css" />
+    <link rel="stylesheet" href="/main.css"  type="text/css" />
     <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
   </head>
   <body>
@@ -37,8 +37,8 @@
         </div>
       </div>
     </div>
-      <div id="left"></div>
-  <div id="right"></div>
+    <div class="card">
+  <div class="container">
 Id   /   <%= @item.id %><br>
    Item  /  <%= @item.name %><br>
    Description  /  <%= @item.description %><br>
@@ -46,3 +46,7 @@ Id   /   <%= @item.id %><br>
    Merchant-id  /  <%= @item.merchant_id%><br>
  Created-at  /  <%= @item.created_at %><br>
  Updated-at  /  <%= @item.updated_at %><br>
+ </div>
+ </div>
+</body>
+</html>
