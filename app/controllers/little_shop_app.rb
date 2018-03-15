@@ -65,7 +65,8 @@ class LittleShopApp < Sinatra::Base
   end
 
   put "/items/:id" do |id|
-    Item.update(id.to_i, params[:item])
+    item = Item.find(params[:id])
+    item = Item.update(id.to_i, params[:item])
     redirect "/items/#{params[:item][:id]}"
   end
 
