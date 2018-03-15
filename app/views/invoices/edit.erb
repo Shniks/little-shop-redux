@@ -1,5 +1,6 @@
 <form action="/invoices/<%= invoice.id %>" method='POST'>
-  <p>Edit Invoice</p>
+  <h2>Edit Invoice</h2>
+  <p> Invoice: <%= invoice.id %> </p>
   <input type='hidden' name='_method' class='input' value='PATCH' /><br/>
   <label style='padding-right: 44px;'>Invoice ID</label><input type="number" name='invoice[id]' style='width: 300px;' class='input' value="<%= invoice.id %>"/><br/>
   <label style='padding-right: 30px;'>Customer ID</label><input type="number" name='invoice[customer_id]' style='width: 300px;' class='input' value="<%= invoice.customer_id %>"/><br/>

@@ -23,15 +23,14 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/invoices/:id/edit' do
-    invoice = Invoice.find(params[:id])
+    invoice = Invoice.find(params['id'])
     erb :'invoices/edit', :locals => { :invoice => invoice }
   end
 
-  patch '/invoices/:id' do |id|
-    require 'pry'; binding.pry
-    Invoice.update(id.to_i, params[:invoice][:id])
-    # redirect "/invoices/#{params[:id]}"
-    redirect '/invoices'
+  patch '/invoices/:id' do
+    invoice = Invoice.find(params[:id])
+    invoice.update(params[:invoice])
+    redirect "/invoices/#{params[:id]}"
   end
 
   delete '/invoices/:id/delete' do
