@@ -29,11 +29,11 @@ class LittleShopApp < Sinatra::Base
 
   put '/merchants/:id' do |id|
     Merchant.update(id.to_i, params[:merchant])
-    redirect "/merchants/#{params[:merchant][:id]}"
+    redirect '/merchants/#{params[:merchant][:id]}'
   end
 
-  delete '/merchants/:id' do |id|
-    Merchant.destroy(id.to_i)
+  delete '/merchants/:id/delete' do
+    Merchant.destroy(params[:id])
     redirect '/merchants'
   end
 

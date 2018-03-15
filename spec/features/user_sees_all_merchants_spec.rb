@@ -39,7 +39,7 @@ describe 'As a user' do
       Merchant.create(name: 'Tyler')
       visit '/merchants'
       within('#drop-down') do
-        click_on('View all Merchants')
+        click_on('View All Merchants')
         expect(current_path).to eq('/merchants')
       end
     end
