@@ -36,7 +36,7 @@ class LittleShopApp < Sinatra::Base
     Merchant.destroy(params[:id])
     redirect '/merchants'
   end
-  
+
   get "/items" do
     items = Item.all
     erb :'items/index', locals: {items: items}
@@ -73,7 +73,7 @@ class LittleShopApp < Sinatra::Base
     Item.destroy(id.to_i)
     redirect "/items"
   end
-  
+
   get '/invoices' do
     invoices = Invoice.all
     erb :'invoices/index', :locals => { :invoices => invoices }

@@ -1,4 +1,4 @@
-ENV["RACK_ENV"]
+ENV["RACK_ENV"] ||= 'test'
 
 require 'rspec'
 require 'capybara/dsl'
