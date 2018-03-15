@@ -27,6 +27,7 @@
           fill_in("item[name]", with: "terminator")
           fill_in("item[description]", with: "death")
           fill_in("item[unit_price]", with: 1000 )
+  
 
           click_button("Submit")
 
