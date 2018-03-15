@@ -200,3 +200,19 @@ margin-left: 70px;
 
 
 }
+
+
+
+.container-edit{
+  transition: 0.3s;
+  position: absolute;
+  left:550px;
+  margin-top: 150px;
+  border-style: solid;
+   border-color: #763a47;
+  background-color:#753a47;
+  display: inline-block;
+  width: 300px;
+   font: italic bold 16px/30px Aclonica, serif;
+   text-align: center;
+}
