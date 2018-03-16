@@ -43,18 +43,23 @@
   </div>
         </div>
       </div>
-      <div class="merchant-div">
+      <div class="merchant-line">
+        <div class="new-merchant">
+        <a id="submit" class="myButton" href="/merchants/new">Create new merchant</a>
+        </div>
+
   <% merchants.each do |merchant| %>
-    <div class="card-2">
-          <div class="container-2">
+    <div class="merchant-container">
        <ul>
-         <li>Id  /  <%= merchant.id %></li>
-         <li>Merchant  /  <%= merchant.name %></li>
-         <li>Created-at  /  <%= merchant.created_at %></li>
-         <li>Updated-at  /  <%= merchant.updated_at %></li>
-         <form action="/merchants/<%= merchant.id %>" method="POST">
-           <input type="hidden" name="_method" value="DELETE">
-           <input type="submit" value="delete">
+        Id  /  <%= merchant.id %></li><br>
+        Merchant  /  <%= merchant.name %></li><br>
+         Created-at  /  <%= merchant.created_at %></li><br>
+         Updated-at  /  <%= merchant.updated_at %></li><br>
+         <a id="submit" class="myButton" href="/merchants/<%= merchant.id %>/edit">Edit</a>
+           <div class="myButton">
+         <form action="/merchants/<%= merchant.id %>/delete" method="POST">
+           <input type="hidden" name="_method" value="delete"/>
+           <input id="submit" type="submit"  class="me" value="Delete"/>
          </form>
        </ul>
      </div>
