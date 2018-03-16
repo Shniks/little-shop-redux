@@ -1,68 +1,21 @@
-<html>
-  <head>
-    <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="main.css"  type="text/css" />
-    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-     <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
-   </header>
-  <div class="nav"  width="100px">
-    <div class="navbar">
-    <a href="/">Home</a>
-      <div class="dropdown-1">
-    <button class="dropbtn">Merchants
-        <i class="la la bub"></i>
-      </button>
-        <div class="dropdown-content" id="drop-down">
-            <a href="/merchants/new">Create a New Merchant</a>
-            <a href="/merchants">Edit a Merchant</a>
-            <a href="/merchants">View All Merchants</a>
-            <a href="/merchants/show_input">View a Merchant</a>
-          </div>
-      </div>
-    <div class="dropdown">
-      <button class="dropbtn">Items
-      <i class="la la bub"></i>
-      </button>
-      <div class="dropdown-content">
-            <a href="/items/new">Create a New Item</a>
-            <a href="/items">Edit an Item</a>
-            <a href="/items">View All Items</a>
-            <a href="/items/show_input">View an Item</a>
-          </div>
-        </div>
-        <div class="dropdown">
-    <button class="dropbtn">Invoices
-      <i class="la la bub"></i>
-    </button>
-    <div class="dropdown-content" id="drop-down">
-      <a href="/invoices">View All Invoices</a>
+<% invoices.each do |invoice| %>
+  <div class="card-2">
+    <div class="container-2">
+      <ul>
+        <li>Id / <%= invoice.id %></li>
+        <li>Customer Id / <%= invoice.customer_id %></li>
+        <li>Merchant Id / <%= invoice.merchant_id %></li>
+        <li>Status / <%= invoice.status %></li>
+        <li>Created-at / <%= invoice.created_at %></li>
+        <li>Updated-at / <%= invoice.updated_at %></li>
+      </ul>
+      <form method="post" action="/invoices/<%= invoice.id %>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="DELETE">
+      </form>
+      <form method="get" action="/invoices/<%= invoice.id %>/edit">
+        <button type="submit">EDIT</button>
+      </form>
     </div>
   </div>
-      </div>
-  <% invoices.each do |invoice| %>
-  <div class="card-2">
-        <div class="container-2">
-  <ul>
-    <li>Id / <%= invoice.id %></li>
-    <li>Customer Id / <%= invoice.customer_id %></li>
-    <li>Merchant Id / <%= invoice.merchant_id %></li>
-    <li>Status / <%= invoice.status %></li>
-    <li>Created-at / <%= invoice.created_at %></li>
-    <li>Updated-at / <%= invoice.updated_at %></li>
-  </ul>
-  <form method="post" action="/invoices/<%= invoice.id %>">
-    <input id="hidden" type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="DELETE">
-  </form>
-  <form method="get" action="/invoices/<%= invoice.id %>/edit">
-    <button type="submit">EDIT</button>
-  </form>
-</div>
-</div>
-  <% end %>
-</div>
-</body>
-</html>
+<% end %>
