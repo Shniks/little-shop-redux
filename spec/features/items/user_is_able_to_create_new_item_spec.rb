@@ -1,6 +1,6 @@
   describe "User visits items new page"  do
     context "User visits [items/new]"  do
-      it "User fill in a new form and clicks submit and sees new item"  do
+      it "User fills in a new form and clicks submit and sees new item"  do
 
          visit '/items/new'
 
