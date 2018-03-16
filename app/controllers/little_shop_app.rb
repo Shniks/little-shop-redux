@@ -37,7 +37,7 @@ class LittleShopApp < Sinatra::Base
     redirect "/merchants/#{params[:merchant][:id]}"
   end
 
-  delete '/merchants/:id/delete' do
+  delete '/merchants/:id' do
     Merchant.destroy(params[:id])
     redirect '/merchants'
   end
