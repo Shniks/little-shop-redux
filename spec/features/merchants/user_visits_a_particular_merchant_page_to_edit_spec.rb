@@ -8,7 +8,7 @@ describe 'As a user' do
       expect(page).to have_content('Items')
       expect(page).to have_content('Merchants')
     end
-    
+
     it 'I can see input box to edit merchant' do
       merchant = Merchant.create(name: 'Tyler')
       visit "/merchants/#{merchant.id}/edit"

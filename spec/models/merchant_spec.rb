@@ -6,7 +6,7 @@ RSpec.describe Merchant do
   end
 
   describe 'Validate fields' do
-    it 'is invalid to not have a name' do
+    it 'Is invalid to not have a name' do
       merchant = Merchant.new()
       expect(merchant).to_not be_valid
     end

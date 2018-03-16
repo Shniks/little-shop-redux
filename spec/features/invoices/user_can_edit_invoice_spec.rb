@@ -1,15 +1,11 @@
-describe 'user edits invoices' do
+describe 'User edits invoices' do
   before(:each) do
     Invoice.create(customer_id: 8, merchant_id: 88, status: 'pending')
     Invoice.create(customer_id: 18, merchant_id: 28, status: 'shipped')
   end
 
-  # after(:each) do
-  #   DatabaseCleaner.clean
-  # end
-
-  describe 'User Can Edit Invoice' do
-    it 'user can edit multiple invoice fields' do
+  describe 'User can edit an invoice' do
+    it 'User can edit multiple invoice fields' do
       visit '/invoices/1/edit'
       fill_in('invoice[customer_id]', with: 108)
       fill_in('invoice[merchant_id]', with: 88)
