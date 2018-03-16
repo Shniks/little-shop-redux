@@ -95,7 +95,7 @@ class LittleShopApp < Sinatra::Base
     redirect "/invoices/#{params[:id]}"
   end
 
-  delete '/invoices/:id/delete' do
+  delete '/invoices/:id' do
     Invoice.destroy(params[:id])
     redirect '/invoices'
   end
