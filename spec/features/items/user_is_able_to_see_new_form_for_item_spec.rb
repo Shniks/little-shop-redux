@@ -1,6 +1,6 @@
 
-  describe 'user visits items/new'  do
-    it 'they see the form for the new item'  do
+  describe 'User visits items/new'  do
+    it 'User sees the form for a new item'  do
 
       visit 'items/new'
 

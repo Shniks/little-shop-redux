@@ -1,6 +1,6 @@
-describe "user visits items edit page"  do
-  context "visit [items/1/edit]"  do
-    it "they fill in edit form and then clicks submit and sees edited item"  do
+describe "User visits items edit page"  do
+  context "User visits [items/id/edit]"  do
+    it "User fills in edit form and then clicks submit and sees edited item"  do
       Item.create!(name: "super toy", description: "its fun", unit_price: 1)
 
        visit '/items/1/edit'
