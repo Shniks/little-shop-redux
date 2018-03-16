@@ -1,61 +1,15 @@
-<html>
-  <head>
-    <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="/main.css"  type="text/css" />
-    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-     <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
-   </header>
-  <div class="nav"  width="100px">
-    <div class="navbar">
-    <a href="/">Home</a>
-      <div class="dropdown-1">
-    <button class="dropbtn">Merchants
-        <i class="la la bub"></i>
-      </button>
-        <div class="dropdown-content" id="drop-down">
-            <a href="/merchants/new">Create a New Merchant</a>
-            <a href="/merchants">Edit a Merchant</a>
-            <a href="/merchants">View All Merchants</a>
-            <a href="/merchants/show_input">View a Merchant</a>
-          </div>
-      </div>
-    <div class="dropdown">
-      <button class="dropbtn">Items
-      <i class="la la bub"></i>
-      </button>
-      <div class="dropdown-content">
-            <a href="/items/new">Create a New Item</a>
-            <a href="/items">Edit an Item</a>
-            <a href="/items">View All Items</a>
-            <a href="/items/show_input">View an Item</a>
-          </div>
-        </div>
-        <div class="dropdown">
-    <button class="dropbtn">Invoices
-      <i class="la la bub"></i>
-    </button>
-    <div class="dropdown-content" id="drop-down">
-      <a href="/invoices">View All Invoices</a>
-    </div>
-  </div>
-      </div>
-      <div class="card-2">
-            <div class="container-2">
-<form action="/invoices/<%= invoice.id %>" method='POST'>
-  <h2>Edit Invoice</h2>
-  <p> Invoice: <%= invoice.id %> </p>
-  <input type='hidden' name='_method' class='input' value='PATCH' /><br/>
-  <label style='padding-right: 30px;'>Customer ID</label><input type="number" name='invoice[customer_id]' style='width: 300px;' class='input' value="<%= invoice.customer_id %>"/><br/>
-  <label style='padding-right: 31px;'>Merchant ID</label><input type="number" name='invoice[merchant_id]' style='width: 300px;' class='input' value="<%= invoice.merchant_id %>"/><br/>
-  <label style='padding-right: 74px;'>Status</label><input type="text" name='invoice[status]' style='width: 300px;' class='input' value="<%= invoice.status %>"/><br/>
-  <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= invoice.created_at %>"/><br/>
-  <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= invoice.updated_at %>"/><br/>
-  <input id="submit-button" type='submit' value="Submit"/>
+<div class="card-2">
+  <div class="container-2">
+    <form action="/invoices/<%= invoice.id %>" method='POST'>
+      <h2>Edit Invoice</h2>
+      <p> Invoice: <%= invoice.id %> </p>
+      <input type='hidden' name='_method' class='input' value='PATCH' /><br/>
+      <label style='padding-right: 30px;'>Customer ID</label><input type="number" name='invoice[customer_id]' style='width: 300px;' class='input' value="<%= invoice.customer_id %>"/><br/>
+      <label style='padding-right: 31px;'>Merchant ID</label><input type="number" name='invoice[merchant_id]' style='width: 300px;' class='input' value="<%= invoice.merchant_id %>"/><br/>
+      <label style='padding-right: 74px;'>Status</label><input type="text" name='invoice[status]' style='width: 300px;' class='input' value="<%= invoice.status %>"/><br/>
+      <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= invoice.created_at %>"/><br/>
+      <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= invoice.updated_at %>"/><br/>
+      <input id="submit-button" type='submit' value="Submit"/>
     </form>
   </div>
 </div>
-</body>
-</html>

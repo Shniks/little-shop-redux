@@ -1,57 +1,11 @@
-<html>
-  <head>
-    <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="/main.css"  type="text/css" />
-    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-      <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
-    </header>
-    <div class="nav"  width="100px">
-      <div class="navbar">
-        <a href="/">Home</a>
-        <div class="dropdown-1">
-          <button class="dropbtn">Merchants
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content" id="drop-down">
-            <a href="/merchants/new">Create a New Merchant</a>
-            <a href="/merchants">Edit a Merchant</a>
-            <a href="/merchants">View All Merchants</a>
-            <a href="/merchants/show_input">View a Merchant</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Items
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/items/new">Create a New Item</a>
-            <a href="/items">Edit an Item</a>
-            <a href="/items">View All Items</a>
-            <a href="/items/show_input">View an Item</a>
-          </div>
-        </div>
-        <div class="dropdown">
-    <button class="dropbtn">Invoices
-      <i class="la la bub"></i>
-    </button>
-    <div class="dropdown-content" id="drop-down">
-      <a href="/invoices">View All Invoices</a>
-    </div>
-  </div>
-
-      </div>
-        <div class="container-edit">
-          <p>Enter a new item:</p>
-    <form action="/items" method="post">
-<select name="item[merchant_id]">
+<div class="container-edit">
+  <p>Enter a new item:</p>
+  <form action="/items" method="post">
+    <select name="item[merchant_id]">
       <% @merchants.each do |merchant| %>
       <option value= "<%=merchant.id%>"> <%=merchant.name %> </option>
-      <% end %>
-    </select>
-    <br>
+    <% end %>
+    </select><br>
     Enter a item name: <br><input id="text-box" type="text" name="item[name]"/><br/>
     Enter a item description: <input id="text-box" type="text" name="item[description]"/><br/>
     Enter a item unit-price: <input id="text-box" type="text" name="item[unit_price]"/><br/>
@@ -59,7 +13,4 @@
     <input type="hidden" name="merchant[updated_at]" value="<%= Time.now %>"/>
     <input id="submit-button" onClick="conf()" type="submit" value="Submit"/>
   </form>
-</div>
-</div>
-<div class="footer">
 </div>

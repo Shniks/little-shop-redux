@@ -1,60 +1,13 @@
-<html>
-  <head>
-    <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="/main.css"  type="text/css" />
-    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-      <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
-    </header>
-    <div class="nav"  width="100px">
-      <div class="navbar">
-        <a href="/">Home</a>
-        <div class="dropdown-1">
-          <button class="dropbtn">Merchants
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content" id="drop-down">
-            <a href="/merchants/new">Create a New Merchant</a>
-            <a href="/merchants">Edit a Merchant</a>
-            <a href="/merchants">View All Merchants</a>
-            <a href="/merchants/show_input">View a Merchant</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Items
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/items/new">Create a New Item</a>
-            <a href="/items">Edit an Item</a>
-            <a href="/items">View All Items</a>
-            <a href="/items/show_input">View an Item</a>
-          </div>
-        </div>
-        <div class="dropdown">
-    <button class="dropbtn">Invoices
-      <i class="la la bub"></i>
-    </button>
-    <div class="dropdown-content" id="drop-down">
-      <a href="/invoices">View All Invoices</a>
-    </div>
+<div class="edit">
+  <div class="container-2">
+    <form action="/merchants/<%= merchant.id %>" method="POST">
+      <p>Edit a merchant:</p>
+      <input type="hidden" name="_method" value="PUT">
+      <input type="number" name="merchant[id]" value="<%= merchant.id %>"/><br/>
+      <input type="text" name="merchant[name]" value="<%= merchant.name %>"/><br/>
+      <input type="hidden" name="merchant[created_at]" value="<%= Time.now %>"/>
+      <input type="hidden" name="merchant[updated_at]" value="<%= Time.now %>"/>
+      <input type="submit" value="Submit"/>
+    </form>
   </div>
-      </div>
-      <div class="edit">
-        <div class="container-2">
-      <ul>
-        <form action="/merchants/<%= merchant.id %>" method="POST">
-          <p>Edit a merchant:</p>
-          <input type="hidden" name="_method" value="PUT">
-          <input type="number" name="merchant[id]" value="<%= merchant.id %>"/><br/>
-          <input type="text" name="merchant[name]" value="<%= merchant.name %>"/><br/>
-          <input type="hidden" name="merchant[created_at]" value="<%= Time.now %>"/>
-          <input type="hidden" name="merchant[updated_at]" value="<%= Time.now %>"/>
-          <input type="submit" value="Submit"/>
-        </form>
-      </div>
-  </div>
-  </body>
-</html>
+</div>
