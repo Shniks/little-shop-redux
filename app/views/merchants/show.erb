@@ -42,8 +42,15 @@
     </div>
   </div>
       </div>
-      <div class="card-2">
-            <div class="container-2">
+              <% merchant.items.each do |items| %>
+              <div class="card">
+                  <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
+                <div class="container">
+              <%= items.name %>
+              <%= items.description %>
+              <%= items.unit_price %>
+
+              <% end %>
       <ul>
        <ul>
          <li>Id  /  <%= merchant.id %></li>
