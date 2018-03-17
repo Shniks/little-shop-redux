@@ -82,7 +82,7 @@ class LittleShopApp < Sinatra::Base
   get "/items-dashboard" do
     @item = Item.all
     erb :'items/dashboard'
-  end 
+  end
 
   get '/invoices' do
     invoices = Invoice.all
@@ -91,6 +91,7 @@ class LittleShopApp < Sinatra::Base
 
   get '/invoices/:id' do
     invoice = Invoice.find(params[:id])
+    @total_price = Invoice.total_price
     erb :'invoices/show', :locals => { :invoice => invoice }
   end
 
