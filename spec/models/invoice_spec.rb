@@ -11,7 +11,8 @@ RSpec.describe Invoice do
       item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 8)
       invoice_item_2 = invoice_1.invoice_items.create!(item_id: 2, invoice_id: 1, quantity: 108, unit_price: 444)
 
-      expect(Invoice.total_price).to eq(999)
+      expect(Invoice.total_price).to eq(417582.0)
+    end
   end
 
   describe 'Validate fields' do
