@@ -1,7 +1,7 @@
 class Item < ActiveRecord::Base
 
 belongs_to :merchant
-belongs_to :invoice_item  
+belongs_to :invoice_item
 validates_presence_of :name
 validates_presence_of :description
 validates_presence_of :unit_price
@@ -14,5 +14,7 @@ validates_presence_of :unit_price
     Item.all.count
   end
 
-
+  def self.get_items_from_merchant
+    Merchant.merchant_items(id)
+  end
 end
