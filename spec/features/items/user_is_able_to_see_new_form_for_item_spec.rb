@@ -2,7 +2,7 @@
   describe 'User visits items/new'  do
     it 'User sees the form for a new item'  do
 
-      visit 'items/new'
+      visit '/items/new'
 
       expect(page).to have_content(" Enter a item name ")
       expect(page).to have_content("Enter a item description:")
