@@ -59,7 +59,6 @@
         Item.create(name: "roach", description: "oh no", unit_price: 13400, merchant_id: 1, image: "somelink")
 
         visit '/items-dashboard'
-         save_and_open_page
 
         expect(page).to have_content(100.43)
         expect(page).to have_content(7)
