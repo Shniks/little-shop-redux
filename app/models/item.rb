@@ -17,4 +17,13 @@ validates_presence_of :unit_price
   def self.get_items_from_merchant
     Merchant.merchant_items(id)
   end
+
+  def self.newest_item
+    Item.order(created_at: :desc).first
+  end
+
+  def self.oldest_item
+    Item.order(created_at: :asc).first
+  end
+
 end
