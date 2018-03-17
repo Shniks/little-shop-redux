@@ -3,7 +3,7 @@ require './app/models/item.rb'
 
 
 RSpec.describe Invoice do
-  it 'it lists the items for each invoice' do
+  it 'It lists the total price for an invoice' do
     invoice_1 = Invoice.create!(customer_id: 28, merchant_id: 8, status: 'pending')
     item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 8)
     invoice_item_1 = invoice_1.invoice_items.create!(item_id: 1, invoice_id: 1, quantity: 666, unit_price: 555)
