@@ -12,7 +12,7 @@ RSpec.describe Invoice do
 
     visit "/invoices/#{invoice_1.id}"
 
-    expect(page).to have_content(invoice_1.total_price)
-    expect(page).to have_content(999)
+    expect(page).to have_content(Invoice.total_price)
+    expect(page).to have_content(417582.0)
   end
 end
