@@ -4,7 +4,7 @@ class LittleShopApp < Sinatra::Base
 
   get '/' do
     erb :welcome
-  end 
+  end
 
 
   get '/merchants/new' do
@@ -78,6 +78,11 @@ class LittleShopApp < Sinatra::Base
     Item.destroy(id.to_i)
     redirect "/items"
   end
+
+  get "/items-dashboard" do
+    @item = Item.all
+    erb :'items/dashboard'
+  end 
 
   get '/invoices' do
     invoices = Invoice.all
