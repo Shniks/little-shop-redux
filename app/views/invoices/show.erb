@@ -1,6 +1,6 @@
 <div class="card-2">
   <div class="container-2">
-    <h2> Invoice: <%= invoice.id %> - <%= invoice.status %> </h2>
+    <h2> Invoice: <%= invoice.id %>  |  Status: <%= invoice.status %>  |  Total Price: $<%= @total_price %> </h2>
     <form method="post" action="/invoices/<%= invoice.id %>/delete">
       <input id="hidden" type="hidden" name="_method" value="DELETE">
       <input type="submit" value="DELETE">
