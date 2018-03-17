@@ -1,23 +1,44 @@
 describe 'Merchant Dashboard' do
   context 'I can visit the merchant dashboard' do
+    before(:each) do
+      @merchant1 = Merchant.create(name: 'Tyler')
+      @merchant2 = Merchant.create(name: 'Nikhil')
+      @merchant3 = Merchant.create(name: 'Kyle')
+      @merchant4 = Merchant.create(name: 'Ian')
+      @merchant5 = Merchant.create(name: 'Ali')
+    end
+
+    after(:each) do
+      DatabaseCleaner.clean
+    end
+
     it 'I can see merchants on the page' do
-      merchant_1 = Merchant.create(name: 'Tyler')
-      merchant_2 = Merchant.create(name: 'Nikhil')
-      merchant_3 = Merchant.create(name: 'Kyle')
-      merchant_4 = Merchant.create(name: 'Ian')
-      merchant_5 = Merchant.create(name: 'Ali')
       visit '/merchants-dashboard'
 
       expect(page).to have_content('Tyler')
-      expect(page).to have_content(merchant_1.name)
+      expect(page).to have_content(@merchant1.name)
       expect(page).to have_content('Nikhil')
-      expect(page).to have_content(merchant_2.name)
+      expect(page).to have_content(@merchant2.name)
       expect(page).to have_content('Kyle')
-      expect(page).to have_content(merchant_3.name)
+      expect(page).to have_content(@merchant3.name)
       expect(page).to have_content('Ian')
-      expect(page).to have_content(merchant_4.name)
+      expect(page).to have_content(@merchant4.name)
       expect(page).to have_content('Ali')
-      expect(page).to have_content(merchant_5.name)
+      expect(page).to have_content(@merchant5.name)
     end
+
+    it 'I can see total number of items for a merchant' do
+      item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 5)
+      item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 5)
+      visit '/merchants-dashboard'
+
+
+      expect(page).to have_content('Ali')
+      expect(page).to have_content()
+      expect(page).to have_content("Total Cost of Items: #{Merchant.total_cost}")
+
+    end
+
+
   end
 end
