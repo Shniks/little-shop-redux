@@ -1,0 +1,8 @@
+<h1 id="merchant-dashboard-header">Merchants Dashboard</h1>
+<div class="merchants-dashboard">
+  <% merchants.each do |merchant| %>
+    <div class="merchant-container">
+    <a    href="/merchants/<%= merchant.id %>"  style="color: rgb(255, 255, 255)"><%= merchant.name %></a> <br>
+    </div>
+  <% end %>
+</div>
