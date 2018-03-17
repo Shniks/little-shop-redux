@@ -32,13 +32,26 @@ describe 'Merchant Dashboard' do
       item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 5)
       visit '/merchants-dashboard'
 
-
       expect(page).to have_content('Ali')
-      expect(page).to have_content()
-      expect(page).to have_content("Total Cost of Items: #{Merchant.total_cost}")
-
+      expect(page).to have_content('Item Count: 2')
     end
 
+    it 'I can see average item price for a merchant' do
+      item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 5)
+      item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 5)
+      visit '/merchants-dashboard'
 
+      expect(page).to have_content('Ali')
+      expect(page).to have_content('Avg Item Price: $499.50')
+    end
+
+    it 'I can see the total cost of items on merchant dashboard' do
+      item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 5)
+      item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 5)
+      visit '/merchants-dashboard'
+
+      expect(page).to have_content('Ali')
+      expect(page).to have_content('Total Cost of Items: $999.00')
+    end
   end
 end
