@@ -110,4 +110,9 @@ class LittleShopApp < Sinatra::Base
     Invoice.destroy(params[:id])
     redirect '/invoices'
   end
+
+  get '/merchants-dashboard' do
+    merchants = Merchant.all
+    erb :'merchants/merchants_dashboard', locals: {merchants: merchants}
+  end
 end
