@@ -1,4 +1,6 @@
 require './app/models/invoice_item.rb'
+require './app/models/item.rb'
+require './app/models/invoice.rb'
 
 RSpec.describe InvoiceItem do
   describe 'Class Methods' do
