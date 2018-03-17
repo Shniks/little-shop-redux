@@ -4,4 +4,7 @@ class Invoice < ActiveRecord::Base
   validates :merchant_id, presence: true
   validates :status, presence: true
 
+  def self.total_price
+    InvoiceItem.sum("quantity * unit_price")
+  end
 end
