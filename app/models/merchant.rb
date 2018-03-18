@@ -21,21 +21,12 @@ class Merchant < ActiveRecord::Base
     Item.maximum("unit_price")
   end
 
-  def self.max_quantity
-  end
-
   def self.find_item_for_max_price
     Item.find_by(unit_price: max_price)
   end
 
-  def self.find_item_for_max_quantity
-  end
-
   def self.find_merchant_id_from_price
     find_item_for_max_price.merchant_id
-  end
-
-  def self.find_merchant_id_from_quantity
   end
 
   def self.merchant_with_highest_price_item
@@ -43,6 +34,14 @@ class Merchant < ActiveRecord::Base
     merchant.name
   end
 
+  def self.merchants_with_quantity
+    merchants = Merchant.all
+    merchants.map do |merchant|
+      { "name" => merchant.name, "count" => merchant.items.count }
+    end
+  end
+
   def self.merchant_with_highest_quantity
+    merchants_with_quantity.sort_by { |k| k["count"]}.last
   end
 end

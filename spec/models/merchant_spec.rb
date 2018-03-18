@@ -29,9 +29,6 @@ RSpec.describe Merchant do
       item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 2)
       invoice_item_2 = InvoiceItem.create!(item_id: 3, invoice_id: 1, quantity: 108, unit_price: 444)
 
-      expect(Merchant.total_price(2)).to eq(417582.00)
-
-
       expect(Merchant.total_sales(2)).to eq(417582.00)
     end
 
