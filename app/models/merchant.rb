@@ -12,8 +12,8 @@ class Merchant < ActiveRecord::Base
     merchant.items.average(:unit_price)
   end
 
-  def self.merchant_items(id)
+  def self.total_sales(id)
     merchant = Merchant.find(id)
-    merchant.items
+    merchant.items.total_price
   end
 end

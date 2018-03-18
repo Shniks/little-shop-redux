@@ -17,4 +17,8 @@ validates_presence_of :unit_price
   def self.get_items_from_merchant
     Merchant.merchant_items(id)
   end
+
+  def self.total_price
+    InvoiceItem.sum("quantity * unit_price")
+  end
 end
