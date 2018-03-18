@@ -12,8 +12,37 @@ class Merchant < ActiveRecord::Base
     merchant.items.average(:unit_price)
   end
 
-  def self.merchant_items(id)
+  def self.total_sales(id)
     merchant = Merchant.find(id)
-    merchant.items
+    merchant.items.total_price
+  end
+
+  def self.max_price
+    Item.maximum("unit_price")
+  end
+
+  def self.max_quantity
+  end
+
+  def self.find_item_for_max_price
+    Item.find_by(unit_price: max_price)
+  end
+
+  def self.find_item_for_max_quantity
+  end
+
+  def self.find_merchant_id_from_price
+    find_item_for_max_price.merchant_id
+  end
+
+  def self.find_merchant_id_from_quantity
+  end
+
+  def self.merchant_with_highest_price_item
+    merchant = Merchant.find(find_merchant_id_from_price)
+    merchant.name
+  end
+
+  def self.merchant_with_highest_quantity
   end
 end
