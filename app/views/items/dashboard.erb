@@ -5,6 +5,11 @@
   <%= @item.total_items %>
   <h2> Average price of Items </h2>
     $<%= @item.average_price %>
+    <h2> Newest Item </h2>
+      <%= @item.newest_item.name %>
+      <h2> Oldest Item </h2>
+        <%= @item.oldest_item.name %>
+
 
 </div>
 </div>
