@@ -331,3 +331,22 @@ color:#ffffff;
   color: white;
   text-align: center;
 }
+
+.card-3 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 19.4%;
+     display: inline-block;
+      margin-right: 20px;
+      background-color: #E2E2E2;
+
+
+
+}
+
+
+.container-3 {
+    padding: 2px 16px;
+
+
+}
