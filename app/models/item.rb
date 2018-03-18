@@ -18,7 +18,6 @@ validates_presence_of :unit_price
     Merchant.merchant_items(id)
   end
 
-
   def self.newest_item
     Item.order(created_at: :desc).first
   end
@@ -27,9 +26,7 @@ validates_presence_of :unit_price
     Item.order(created_at: :asc).first
   end
 
-
   def self.total_price
     InvoiceItem.sum("quantity * unit_price")
   end
-
 end

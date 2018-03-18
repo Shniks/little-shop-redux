@@ -2,7 +2,7 @@ require './app/models/invoice.rb'
 require './app/models/item.rb'
 
 
-RSpec.describe Invoice do
+RSpec.describe "User sees a list of items" do
   it 'it lists the items for each invoice' do
     invoice_1 = Invoice.create!(customer_id: 28, merchant_id: 8, status: 'pending')
     item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 8)
