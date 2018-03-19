@@ -1,0 +1,9 @@
+
+  <div class="card-2">
+    <div class="container-2">
+  <h2> Highest price item invoice </h2>
+    <% highest_price_invoice = @invoices.highest_price.first %>
+    <a href="/invoices/<%= highest_price_invoice.invoice_id %>"><%= highest_price_invoice.invoice_id %></a>
+  <h2> Lowest price item invoice </h2>
+    <%lowest_price_invoice = @invoices.lowest_price.first %>
+      <a href="/invoices/<%= lowest_price_invoice.invoice_id %>"><%= lowest_price_invoice.invoice_id %></a>
