@@ -422,6 +422,10 @@ color:#ffffff;
   margin-top: 100px;
   text-align: center;
   font-size: 100px;
+  border-top-left-radius:15px;
+  border-bottom-left-radius:15px;
+  border-top-right-radius:15px;
+  border-bottom-right-radius:15px;
 
 }
 
@@ -443,6 +447,10 @@ color:#ffffff;
  justify-content: center;
    height: 20px;
    margin-top: 10px;
+   border-top-left-radius:15px;
+   border-bottom-left-radius:15px;
+   border-top-right-radius:15px;
+   border-bottom-right-radius:15px;
 
 
 
