@@ -111,6 +111,11 @@ class LittleShopApp < Sinatra::Base
     redirect '/invoices'
   end
 
+  get '/invoices-dashboard' do
+    @invoices = Invoice.all
+    erb :'invoices/dashboard'
+  end
+
   get '/merchants-dashboard' do
     merchants = Merchant.all
     erb :'merchants/dashboard', locals: {merchants: merchants}
