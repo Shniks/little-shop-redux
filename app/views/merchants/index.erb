@@ -1,3 +1,5 @@
+<h1 id="merchant-index-header">Merchants</h1>
+<a id="new-merch-button" href="/merchants/new">Create A New Merchant</a>
 <div class="merchant-line">
   <% merchants.each do |merchant| %>
     <div class="merchant-container">
@@ -5,13 +7,13 @@
     Id  /  <%= merchant.id %>
     Created-at  /  <%= merchant.created_at %>
     Updated-at  /  <%= merchant.updated_at %>
-    <a id="submit" class="myButton" href="/merchants/<%= merchant.id %>/edit">Edit</a>
       <div class="myButton">
         <form action="/merchants/<%= merchant.id %>/delete" method="POST">
           <input type="hidden" name="_method" value="delete"/>
           <input id="submit" type="submit"  class="me" value="Delete"/>
         </form>
       </div>
+      <a id="submit" class="myButton" href="/merchants/<%= merchant.id %>/edit">Edit</a>
     </div>
   <% end %>
  </div>
