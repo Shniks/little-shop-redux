@@ -83,6 +83,10 @@ class LittleShopApp < Sinatra::Base
     @item = Item.all
     erb :'items/dashboard'
   end
+  
+  get '/invoices/new' do
+    erb :'invoices/new'
+  end
 
   get '/invoices' do
     invoices = Invoice.all
@@ -99,6 +103,7 @@ class LittleShopApp < Sinatra::Base
     invoice = Invoice.find(params['id'])
     erb :'invoices/edit', :locals => { :invoice => invoice }
   end
+
 
   patch '/invoices/:id' do
     invoice = Invoice.find(params[:id])
