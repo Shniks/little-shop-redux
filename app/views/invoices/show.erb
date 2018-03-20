@@ -1,16 +1,29 @@
-<div class="card-2">
-  <div class="container-2">
-    <h2> Invoice: <%= invoice.id %>  |  Status: <%= invoice.status %>  |  Total Price: $<%= @total_price %> </h2>
+<div class='merchant-header'>
+<h1><font color="white">Invoice ID:<%= invoice.id %></font><br></h1>
+<div class="myButton-merchant">
+  <form action="/invoices/<%= invoice.id %>" method="POST">
+    <input type="hidden" name="_method" value="delete"/>
+    <input id="submit" type="submit"  class="me" value="Delete"/>
+  </form>
+</div>
+<a id="submit" class="myButton-merchant" href="/invoices/<%= invoice.id %>/edit">Edit</a>
+</div>
+</div>
+  <div class="invoice-box">
+<p>Item-ID Item-Title Quantity Unit_Price</p>
+  </div>
+    <div class="merchant-line-1">
+      <% invoice.invoice_items.each do |invoice_item| %>
+      <div class="merchant-container-1">
+          <a    href="/items/<%= invoice_item.item_id %>"  style="color: rgb(255, 255, 255)"><%= invoice_item.item_id %></a>
+    <%= invoice_item.item.name %> <%= invoice_item.quantity %> <%= invoice_item.unit_price %>
+  <div class="myButton-invoice">
     <form method="post" action="/invoices/<%= invoice.id %>/delete">
       <input id="hidden" type="hidden" name="_method" value="DELETE">
-      <input type="submit" value="DELETE">
+      <input type="submit" class='me-invoice'value="DELETE">
     </form>
-    <form method="get" action="/invoices/<%= invoice.id %>/edit">
-      <button type="submit">EDIT</button>
-    </form>
-    <ul> <% invoice.invoice_items.each do |invoice_item| %>
-      <li> <%= invoice_item.item_id %> <%= invoice_item.item.name %> <%= invoice_item.quantity %> <%= invoice_item.unit_price %></li>
-      <% end %>
-    </ul>
-  </div>
 </div>
+<a id="submit" class="myButton-invoice" href="/invoices/<%= invoice_item.id %>/edit">Edit</a>
+</div>
+      <% end %>
+  </div>
