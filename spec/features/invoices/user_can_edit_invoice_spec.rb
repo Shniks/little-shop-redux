@@ -9,7 +9,7 @@ describe 'User edits invoices' do
       fill_in('invoice[status]', with: 'sold')
       click_button 'Submit'
 
-      expect(page).to have_content("Invoice: #{invoice.id}")
+      expect(page).to have_content("Invoice ID: #{invoice.id}")
       expect(page).to have_content('sold')
     end
   end
