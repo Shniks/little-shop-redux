@@ -14,9 +14,9 @@
       <% end %>
       </select><br>
       Status:<select name="invoice[status]">
-        <option value= "<%=@invoice.status%>"> returned </option>
-            <option value= "<%=@invoice.status%>"> shipped </option>
-                <option value= "<%=@invoice.status%>"> pending </option>
+        <option value="returned"> returned </option>
+            <option value="shipped"> shipped </option>
+                <option value="pending"> pending </option>
       </select><br>
       <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= @invoice.created_at %>"/><br/>
       <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= @invoice.updated_at %>"/><br/>
