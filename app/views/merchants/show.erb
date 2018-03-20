@@ -1,68 +1,31 @@
-<html>
-  <head>
-    <title>Little Shop Redux</title>
-    <link rel="stylesheet" href="/main.css"  type="text/css" />
-    <link rel="shortcut icon" href="https://i.imgur.com/dfPcsdI.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-      <img src="https://i.imgur.com/V2ZZB07.jpg" alt="banner" height="300px" width="100%">
-    </header>
-    <div class="nav"  width="100px">
-      <div class="navbar">
-        <a href="/">Home</a>
-        <div class="dropdown-1">
-          <button class="dropbtn">Merchants
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content" id="drop-down">
-            <a href="/merchants/new">Create a New Merchant</a>
-            <a href="/merchants">Edit a Merchant</a>
-            <a href="/merchants">View All Merchants</a>
-            <a href="/merchants/show_input">View a Merchant</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Items
-            <i class="la la bub"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="/items/new">Create a New Item</a>
-            <a href="/items">Edit an Item</a>
-            <a href="/items">View All Items</a>
-            <a href="/items/show_input">View an Item</a>
-          </div>
-        </div>
-        <div class="dropdown">
-    <button class="dropbtn">Invoices
-      <i class="la la bub"></i>
-    </button>
-    <div class="dropdown-content" id="drop-down">
-      <a href="/invoices">View All Invoices</a>
-    </div>
-  </div>
-      </div>
-              <% merchant.items.each do |items| %>
-              <div class="card">
-                  <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
-                <div class="container">
-              <%= items.name %>
-              <%= items.description %>
-              <%= items.unit_price %>
+<div class='merchant-header'>
+<h1><font color="white"><%= merchant.name %></font><br></h1>
+<div class="myButton-merchant">
+  <form action="/merchants/<%= merchant.id %>" method="POST">
+    <input type="hidden" name="_method" value="delete"/>
+    <input id="submit" type="submit"  class="me" value="Delete"/>
+  </form>
+</div>
+<a id="submit" class="myButton-merchant" href="/merchants/<%= merchant.id %>/edit">Edit</a>
+</div>
+</div>
 
-              <% end %>
-      <ul>
-       <ul>
-         <li>Id  /  <%= merchant.id %></li>
-         <li>Merchant  /  <%= merchant.name %></li>
-         <li>Created-at  /  <%= merchant.created_at %></li>
-         <li>Updated-at  /  <%= merchant.updated_at %></li>
-         <form action="/merchants/<%= merchant.id %>" method="POST">
-           <input type="hidden" name="_method" value="DELETE">
-           <input type="submit" value="delete">
-         </form>
-       </ul>
+<% merchant.items.each do |items| %>
+<div class="card-merchant">
+  <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
+  <div class="container-merchant">
+<p><a href="/items/<%= items.id %>"><%= items.name %></a></p>
+ Id  /  <%= merchant.id %><br>
+Created-at  /  <%= merchant.created_at %><br>
+Updated-at  /  <%= merchant.updated_at %><br>
+<form action="/items/<%= items.id %>" method="POST">
+  <input type="hidden" name="_method" value="delete"/>
+  <input id="submit" type="submit"  class="me" value="Delete"/>
+</form>
+
+
      </div>
  </div>
+ <% end %>
  </body>
 </html>

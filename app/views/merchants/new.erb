@@ -1,11 +1,12 @@
-<div class="new">
-  <div class="container-2">
-      <form action="/merchants" method="POST">
-        <p>Create a new merchant:</p>
-        <input type="text" name="merchant[name]"/><br/>
-        <input type="hidden" name="merchant[created_at]" value="<%= Time.now %>"/>
-        <input type="hidden" name="merchant[updated_at]" value="<%= Time.now %>"/>
-        <input type="submit" value="Submit"/>
-      </form>
-    </div>
+<div class="container-new-merchant">
+
+    <form action="/merchants" class='new-merchant-form'method="post">
+      Enter a new merchant name: <br><input id="text-box" type="text" name="merchant[name]"/><br/>
+      <button onclick="goBack()">Cancel</button>
+      <input type="hidden" name="merchant[created_at]" value="<%= Time.now %>"/>
+      <input type="hidden" name="merchant[updated_at]" value="<%= Time.now %>"/>
+      <input id="submit-button" onClick="conf()" type="submit" value="Submit"/>
+    </form>
+
+
 </div>

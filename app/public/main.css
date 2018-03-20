@@ -127,8 +127,12 @@
  }
 
  .new{
-   background-color: #669999;
+   background-color: white;
    font: italic bold 16px/30px Georgia, serif;
+   width: 400px;
+   height: 300px;
+   margin-top: 200px;
+   margin-left: 550px;
  }
 .buttons {
   color: #ffd11a;
@@ -206,7 +210,6 @@
 .merchant-line{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-top: 200px;
   width: 100%;
 }
 
@@ -362,6 +365,7 @@ color:#ffffff;
   margin-right: 45px;
   height: 20px;
   float: center;
+  width: 1370px;
 }
 
 #new-merch-button:hover {
@@ -371,4 +375,109 @@ color:#ffffff;
 #new-merch-button:active {
 	position:relative;
 	top:1px;
+}
+
+.card-merchant {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 300px;
+    display: flex;
+  justify-content: space-between;
+      margin-right: 20px;
+      background-color: #E2E2E2;
+      margin-top: 100px;
+
+}
+​
+.card-merchant:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+​
+.container-merchant {
+    padding: 2px 16px;
+
+
+}
+
+
+.card-merchant {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 19.4%;
+     display: inline-block;
+      margin-right: 20px;
+      background-color: #763a47;
+       text-align: center;
+       margin-left: 130px;
+
+
+
+}
+
+
+.container-merchant {
+    padding: 2px 16px;}
+
+.merchant-header {
+  background-color: #763a47;
+  width: 1100px;
+  height: 220px;
+  margin-left: 150px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 100px;
+  border-top-left-radius:15px;
+  border-bottom-left-radius:15px;
+  border-top-right-radius:15px;
+  border-bottom-right-radius:15px;
+
+}
+
+
+.myButton-merchant {
+	background-color:#db8a61;
+
+	border:1px solid  black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+   height: 20px;
+   margin-top: 10px;
+   border-top-left-radius:15px;
+   border-bottom-left-radius:15px;
+   border-top-right-radius:15px;
+   border-bottom-right-radius:15px;
+
+
+
+
+
+}
+
+a {
+    color: white;
+}
+
+
+.container-new-merchant{
+  transition: 0.3s;
+  position: absolute;
+  left:470px;
+  margin-top: 150px;
+  border-style: solid;
+   border-color: #763a47;
+  background-color:#753a47;
+  display: inline-block;
+  width: 500px;
+  height: 200px;
+   font: italic bold 16px/30px Aclonica, serif;
+   text-align: center;
 }
