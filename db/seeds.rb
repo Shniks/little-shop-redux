@@ -21,7 +21,7 @@ CSV.foreach('data/items.csv', headers: true, header_converters: :symbol, convert
               merchant_id: row[:merchant_id],
               created_at:  row[:created_at],
               updated_at:  row[:updated_at],
-              image:       "../public/images/ruby.png")
+              image:        "https://image.ibb.co/iU6Bsx/ruby_on_rails.png")
 end
 
 CSV.foreach('data/invoice_items.csv', headers: true, header_converters: :symbol, converters: :numeric) do |row|
