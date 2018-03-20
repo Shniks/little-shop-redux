@@ -37,7 +37,8 @@ class Merchant < ActiveRecord::Base
   def self.merchants_with_quantity
     merchants = Merchant.all
     merchants.map do |merchant|
-      { "name" => merchant.name, "count" => merchant.items.count }
+       { "name" => merchant.name, "count" => merchant.items.count,
+         "id" => merchant.id }
     end
   end
 
