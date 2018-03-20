@@ -1,17 +1,17 @@
-<h1 id="merchant-dashboard-header">Items Dashboard</h1>
-
-<div class="merchant-container-dashboard">
-  <h2> Total count of Items </h2>
-  <%= @item.total_items %>
-</div>
-<div class="merchant-container-dashboard">
-  <h2> Average price of Items </h2>
-  $<%= @item.average_price %>
-</div>
-<div class="merchant-container-dashboard">
+<h1 id="dashboard-header">Items Dashboard</h1>
+<div class="item-dashboard">
+  <div class="item-container-dashboard">
+    <h2> Total count of Items </h2>
+    <h1><%= @item.total_items %></h1>
+  </div>
+  <div class="item-container-dashboard">
+    <h2> Average price of Items </h2>
+    <h1>$<%= @item.average_price %></h1>
+  </div>
+  <div class="item-container-dashboard">
     <h2> Item by Age</h2>
     <h3> Newest Item </h3>
-    <%= @item.newest_item.name %>
+    <h6><%= @item.newest_item.name %></h6>
     <h3> Oldest Item </h3>
-    <%= @item.oldest_item.name %>
-</div>
+    <h6><%= @item.oldest_item.name %></h6>
+  </div>
