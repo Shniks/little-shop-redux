@@ -6,7 +6,6 @@ class LittleShopApp < Sinatra::Base
     erb :welcome
   end
 
-
   get '/merchants/new' do
     erb :'merchants/new'
   end
@@ -123,6 +122,7 @@ class LittleShopApp < Sinatra::Base
 
   get '/merchants-dashboard' do
     merchants = Merchant.all
-    erb :'merchants/dashboard', locals: {merchants: merchants}
+    high_quantity_id = Merchant.merchant_with_highest_quantity["id"]
+    erb :'merchants/dashboard', locals: {merchants: merchants, high_quantity_id: high_quantity_id}
   end
 end

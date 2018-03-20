@@ -321,6 +321,48 @@ color:#ffffff;
   text-align: center;
 }
 
+#merchant-dashboard-header-1{
+  display: inline-flex;
+  font-family: helvetica;
+  font-weight: lighter;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: white;
+}
+
+#merchant-dashboard-header-2{
+  display: inline-flex;
+  font-family: helvetica;
+  font-weight: lighter;
+  font-size: 30px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 20px;
+  color: white;
+}
+
+#merchant-dashboard-header-3{
+  display: inline-flex;
+  font-family: helvetica;
+  font-weight: lighter;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: white;
+}
+
+#merchant-dashboard-header-4{
+  display: inline-flex;
+  font-family: helvetica;
+  font-weight: lighter;
+  font-size: 30px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 16.5%;
+  color: white;
+}
+
 #merchant-index-header {
   font-family: helvetica;
   font-weight: lighter;
