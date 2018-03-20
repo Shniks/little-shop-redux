@@ -398,7 +398,7 @@ color:#ffffff;
   font-size: 30px;
   float: right;
   margin-top: 30px;
-  margin-right: 16.5%;
+  margin-right: 275px;
   color: white;
 }
 
@@ -812,4 +812,25 @@ margin-right: 170px;
 }
 .description{
   height: 60px;
+}
+
+.merchant-container-dashboard {
+  display: inline-block;
+  height: 240px;
+  width: 240px;
+  transition: 0.3s;
+  position: left;
+  border-style: solid;
+  border-color: #763a47;
+  background-color:#cb8f7a;
+  margin-top: 25px;
+  margin-left: 22px;
+  font: 16px/30px Aclonica, serif;
+  border:1px solid white;
+
+}
+
+
+.merchant-container-dashboard a {
+  font-size: 20px;
 }

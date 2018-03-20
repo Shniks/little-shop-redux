@@ -4,13 +4,19 @@
   <h3 id="merchant-dashboard-header-2">Merchant With Highest Price Item:</h3>
 </div>
 <div>
-  <h3 id="merchant-dashboard-header-3"><a href = "/merchants/#{high_quantity_id}"><%= Merchant.merchant_with_highest_quantity["name"]%></a></h3>
-  <h3 id="merchant-dashboard-header-4"><%= Merchant.merchant_with_highest_price_item%></h3>
+  <h3 id="merchant-dashboard-header-3"><a href = "/merchants/<%= high_quantity_id %>"><%= Merchant.merchant_with_highest_quantity["name"]%></a></h3>
+  <h3 id="merchant-dashboard-header-4"><a href = "/merchants/<%= highest_price_id %>"><%= Merchant.merchant_with_highest_price_item["name"]%></a></h3>
 </div>
 <div class="merchants-dashboard">
   <% merchants.each do |merchant| %>
-    <div class="merchant-container">
+    <div class="merchant-container-dashboard">
     <a href="/merchants/<%= merchant.id %>"  style="color: rgb(255, 255, 255)"><%= merchant.name %></a> <br>
+    <h6>Item Count:</h6>
+    <%= Merchant.total_items(merchant.id) %>
+    <h6>Avg. Item Price:</h6>
+    <%= Merchant.average_price(merchant.id) %>
+    <h6> Total Cost of Items:</h6>
+    <%= Merchant.total_sales(merchant.id) %>
     </div>
   <% end %>
 </div>

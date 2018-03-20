@@ -127,6 +127,7 @@ class LittleShopApp < Sinatra::Base
   get '/merchants-dashboard' do
     merchants = Merchant.all
     high_quantity_id = Merchant.merchant_with_highest_quantity["id"]
-    erb :'merchants/dashboard', locals: {merchants: merchants, high_quantity_id: high_quantity_id}
+    highest_price_id = Merchant.merchant_with_highest_price_item["id"]
+    erb :'merchants/dashboard', locals: { merchants: merchants, high_quantity_id: high_quantity_id, highest_price_id: highest_price_id }
   end
 end
