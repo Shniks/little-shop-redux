@@ -1,6 +1,6 @@
+
 <div class='merchant-header'>
-<
-<h1><font color="white">Invoice ID: <%= invoice.id %> - Invoice Status: <%= invoice.status %> - Invoice Total: <%= invoice.total_price(invoice.id) %>  </font><br></h1>
+<h1><font color="white">Invoice ID: <%= invoice.id %> - Invoice Status: <%= invoice.status %> - Invoice Total: $<%= invoice.total_price(invoice.id) %>  </font><br></h1>
 <div class="myButton-merchant">
   <form action="/invoices/<%= invoice.id %>" method="POST">
     <input type="hidden" name="_method" value="delete"/>
@@ -10,6 +10,7 @@
 <a id="submit" class="myButton-merchant" href="/invoices/<%= invoice.id %>/edit">Edit</a>
 </div>
 </div>
+<a id="new-merch-button-1" href="/merchants/<%= @merchant.id %>"><%= @merchant.name %></a>
   <div class="invoice-box">
 <p>Item-ID Item-Title Quantity Unit_Price</p>
   </div>

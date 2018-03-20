@@ -11,7 +11,7 @@
 </div>
 <% merchant.items.each do |items| %>
 <div class="card-merchant">
-  <img src="<%= item.image %>" alt="Ruby" height="100" width="100">
+  <img src="<%= items.image %>" alt="Ruby" height="100" width="100">
   <div class="container-merchant">
 <p><a href="/items/<%= items.id %>"><%= items.name %></a></p><br>
   Price /  $<%= items.unit_price %><br>

@@ -1,4 +1,5 @@
-<div class="container-edit">
+<div class="back4">
+<div class="container-edit-3">
   <form action="/items/<%= @item.id %>" method="POST">
     <p>Edit Item</p>
     <input type="hidden" name="_method"  class="input" value="PUT" />
@@ -6,9 +7,16 @@
     Enter a item name:<input type='text' name='item[name]' class="input" style="width: 300px;" class="input" value="<%= @item.name %>"/><br/>
     Enter a item description: <input type='text' name='item[description]' class="input" style="width: 300px;" class="input" value="<%= @item.description %>"/><br/>
     Enter a unit price:  <input type='text' name='item[unit_price]' class="input" style="width: 300px;" class="input" value="<%= @item.unit_price %>"/><br/>
-    <input type='text' name='item[merchant_id]' class="input" style="width: 300px;" class="input" value="<%= @item.merchant_id %>"/><br/>
+
+  Merchant-Name  <select name="item[merchant_id]">
+      <% @merchants.each do |merchant| %>
+      <option value= "<%=merchant.id%>"> <%=merchant.name %> </option>
+    <% end %>
+    </select><br>
     <input type="hidden" name='item[created_at]' class="input" style="width: 300px;" class="input" value="<%= @item.created_at %>"/><br/>
     <input type="hidden" name='item[updated_at]' class="input" style="width: 300px;" class="input" value="<%= Time.now %>"/><br/>
+    <button onclick="goBack()">Cancel</button>
     <input type='submit'value="Submit"/>
   </form>
+</div>
 </div>

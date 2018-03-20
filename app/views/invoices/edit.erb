@@ -1,6 +1,7 @@
 <div class='merchant-header'>
 <h1><font color="white">Invoice:<%= invoice.id %>-<%= invoice.status %></font><br></h1>
 </div>
+<div class="back-2">
 <div class="card-invoice_edit">
   <div class="container-invoice_edit">
     <form action="/invoices/<%= invoice.id %>" method='POST'>
@@ -16,6 +17,7 @@
       <input id="submit-button" type='submit' value="Submit"/>
     </form>
   </div>
+</div>
 </div>
 <div class="invoice-box">
 <p>Item-ID Item-Title Quantity Unit_Price</p>
