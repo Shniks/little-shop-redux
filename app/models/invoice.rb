@@ -4,8 +4,10 @@ class Invoice < ActiveRecord::Base
   validates :merchant_id, presence: true
   validates :status, presence: true
 
-  def self.total_price
-    InvoiceItem.sum("quantity * unit_price")
+  def total_price(id)
+    invoice = Invoice.find(id)
+    invoiceitems = invoice.invoice_items
+    invoiceitems.sum("quantity * unit_price")
   end
 
   def self.highest_price
@@ -18,4 +20,13 @@ class Invoice < ActiveRecord::Base
     InvoiceItem.where(unit_price: lowest_price_item)
   end
 
+  def self.highest_quantity
+    highest_quantity_invoice = InvoiceItem.maximum('quantity')
+    InvoiceItem.where(quantity: highest_quantity_invoice).first
+  end
+
+  def self.lowest_quantity
+    lowest_quantity_invoice = InvoiceItem.minimum('quantity')
+    InvoiceItem.where(quantity: lowest_quantity_invoice).first
+  end
 end

@@ -7,9 +7,9 @@ describe 'User can delete invoices' do
     it 'User deletes an invoice' do
       invoice = Invoice.create(customer_id: 18, merchant_id: 28, status: 'shipped')
       visit "/invoices/#{invoice.id}"
-      click_button 'DELETE'
+      click_button 'Delete'
 
-      expect(page).to_not have_content('pending')
+      expect(page).to have_content('Invoices')
     end
   end
 end

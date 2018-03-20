@@ -11,7 +11,7 @@ describe 'As a user' do
     it 'I can see content in the body' do
       visit '/merchants/new'
 
-      expect(page).to have_content('Create a new merchant:')
+      expect(page).to have_content('Create a New Merchant')
     end
 
     it 'I can see input box for a new merchant' do
