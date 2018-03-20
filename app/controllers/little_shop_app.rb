@@ -3,7 +3,7 @@ class LittleShopApp < Sinatra::Base
   set :method_override, true
 
   get '/' do
-    erb :welcome
+    erb :welcome,:layout => :welcome
   end
 
   get '/merchants/new' do
@@ -103,8 +103,9 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/invoices/:id/edit' do
-    invoice = Invoice.find(params['id'])
-    erb :'invoices/edit', :locals => { :invoice => invoice }
+    @merchants = Merchant.all
+    @invoice = Invoice.find(params[:id])
+    erb :'invoices/edit'
   end
 
 
@@ -130,4 +131,10 @@ class LittleShopApp < Sinatra::Base
     highest_price_id = Merchant.merchant_with_highest_price_item["id"]
     erb :'merchants/dashboard', locals: { merchants: merchants, high_quantity_id: high_quantity_id, highest_price_id: highest_price_id }
   end
+
+  not_found do
+    status 404
+    erb :"error"
+  end
+
 end
