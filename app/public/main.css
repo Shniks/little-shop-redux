@@ -351,12 +351,14 @@ color:#ffffff;
   margin-top: 100px;
 }
 
-#merchant-dashboard-header{
+#dashboard-header{
   font-family: helvetica;
-  font-weight: lighter;
+  border: 3px solid grey;
+  background-color: whitesmoke;
   font-size: 50px;
   margin-top: 100px;
-  color: white;
+  padding: 40px;
+  color: black;
   text-align: center;
 }
 
@@ -830,7 +832,59 @@ margin-right: 170px;
 
 }
 
-
 .merchant-container-dashboard a {
   font-size: 20px;
+}
+
+.item-dashboard{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.item-container-dashboard {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  transition: 0.3s;
+  position: left;
+  border-style: solid;
+  border-color: #763a47;
+  background-color:#cb8f7a;
+  margin-top: 25px;
+  margin-left: 100px;
+  font: 16px/30px Aclonica, serif;
+  border:1px solid white;
+
+}
+
+.item-container-dashboard h1 {
+  margin-top: 80px;
+  font-family: helvetica;
+  text-align: center;
+  font-size: 50px;
+}
+
+.item-container-dashboard h2 {
+  font-family: helvetica;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.item-container-dashboard h3 {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: helvetica;
+  text-decoration: underline;
+  text-align: left;
+  font-size: 20px;
+}
+
+.item-container-dashboard h6 {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-family: helvetica;
+  text-align: left;
+  font-size: 14px;
 }
