@@ -1,5 +1,5 @@
 <div class='merchant-header'>
-<h1><font color="white">Invoice ID:<%= invoice.id %></font><br></h1>
+<h1><font color="white">Invoice:<%= invoice.id %>-<%= invoice.status %></font><br></h1>
 <div class="myButton-merchant">
   <form action="/invoices/<%= invoice.id %>" method="POST">
     <input type="hidden" name="_method" value="delete"/>
@@ -15,15 +15,24 @@
     <div class="merchant-line-1">
       <% invoice.invoice_items.each do |invoice_item| %>
       <div class="merchant-container-1">
-          <a    href="/items/<%= invoice_item.item_id %>"  style="color: rgb(255, 255, 255)"><%= invoice_item.item_id %></a>
-    <%= invoice_item.item.name %> <%= invoice_item.quantity %> <%= invoice_item.unit_price %>
-  <div class="myButton-invoice">
-    <form method="post" action="/invoices/<%= invoice.id %>/delete">
-      <input id="hidden" type="hidden" name="_method" value="DELETE">
-      <input type="submit" class='me-invoice'value="DELETE">
-    </form>
+        <div class="work">
+        <div class="invoice-lines">
+    <a    href="/items/<%= invoice_item.item_id %>"  style="color: rgb(255, 255, 255)"><%= invoice_item.item_id %></a>
+  </div>
+<div class="invoice-lines-2">
+    <%= invoice_item.item.name %>
+  </div>
+  <div class="invoice-lines-3">
+
+ <%= invoice_item.quantity %>
 </div>
-<a id="submit" class="myButton-invoice" href="/invoices/<%= invoice_item.id %>/edit">Edit</a>
+  <div class="invoice-lines-4">
+
+$<%= invoice_item.unit_price %>
+</div>
+</div>
+</div>
+
 </div>
       <% end %>
   </div>
