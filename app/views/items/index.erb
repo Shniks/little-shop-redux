@@ -1,15 +1,12 @@
 <% items.each do |item| %>
-  <div class="card">
+  <div class="card-merchant">
     <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
-    <div class="container">
-      <ul>
-        <li>Id  /  <%= item.id %></li>
-        <li>Item  /  <%= item.name %></li>
-        <li>Description  /  <%= item.description %></li>
-        <li>Unit Price  /  <%= item.unit_price %></li>
-        <li>Merchant ID  /  <%= item.merchant_id %></li>
-        <li>Created-at  /  <%= item.created_at %></li>
-        <li>Updated-at  /  <%= item.updated_at %></li>
+  <div class="container-merchant">
+   <a    href="/items/<%= item.id %>"  style="color: rgb(255, 255, 255)"><%= item.name %></a>
+
+
+
+        <li>Unit Price  /  $<%= item.unit_price %></li>
       </ul>
     </div>
   </div>
