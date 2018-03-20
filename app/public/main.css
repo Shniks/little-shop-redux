@@ -349,6 +349,9 @@ color:#ffffff;
 
 .merchants-dashboard{
   margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
 }
 
 #dashboard-header{
