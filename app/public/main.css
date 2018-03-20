@@ -223,6 +223,8 @@
   margin-top: 25;
   font: 16px/30px Aclonica, serif;
   width: 100%;
+  border:1px solid white;
+
 }
 
 .container-edit{
@@ -384,6 +386,7 @@ color:#ffffff;
       background-color: #E2E2E2;
       margin-top: 100px;
 
+
 }
 ​
 .card-merchant:hover {
@@ -406,6 +409,7 @@ color:#ffffff;
       background-color: #763a47;
        text-align: center;
        margin-left: 130px;
+       border:1px solid white;
 
 
 
@@ -413,7 +417,12 @@ color:#ffffff;
 
 
 .container-merchant {
-    padding: 2px 16px;}
+    height: 66px;
+    margin-top: 50px;
+    padding: 2px 16px;
+  background-color:#db8a61;
+  border:1px solid white;
+}
 
 .merchant-header {
   background-color: #763a47;

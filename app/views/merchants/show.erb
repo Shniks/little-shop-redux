@@ -9,22 +9,13 @@
 <a id="submit" class="myButton-merchant" href="/merchants/<%= merchant.id %>/edit">Edit</a>
 </div>
 </div>
-
 <% merchant.items.each do |items| %>
 <div class="card-merchant">
   <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
   <div class="container-merchant">
-<p><a href="/items/<%= items.id %>"><%= items.name %></a></p>
- Id  /  <%= merchant.id %><br>
-Created-at  /  <%= merchant.created_at %><br>
-Updated-at  /  <%= merchant.updated_at %><br>
-<form action="/items/<%= items.id %>" method="POST">
-  <input type="hidden" name="_method" value="delete"/>
-  <input id="submit" type="submit"  class="me" value="Delete"/>
-</form>
-
-
-     </div>
+<p><a href="/items/<%= items.id %>"><%= items.name %></a></p><br>
+  Price /  $<%= items.unit_price %><br>
+   </div>
  </div>
  <% end %>
  </body>
