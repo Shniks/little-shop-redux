@@ -8,7 +8,7 @@
     Created-at  /  <%= merchant.created_at %>
     Updated-at  /  <%= merchant.updated_at %>
       <div class="myButton">
-        <form action="/merchants/<%= merchant.id %>/delete" method="POST">
+        <form action="/merchants/<%= merchant.id %>" method="POST">
           <input type="hidden" name="_method" value="delete"/>
           <input id="submit" type="submit"  class="me" value="Delete"/>
         </form>

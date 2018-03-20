@@ -11,7 +11,7 @@ RSpec.describe "User sees total price for an invoice" do
     invoice_item_2 = invoice_1.invoice_items.create!(item_id: 2, invoice_id: 1, quantity: 108, unit_price: 444)
     visit "/invoices/#{invoice_1.id}"
 
-    expect(page).to have_content(Invoice.total_price)
+    expect(page).to have_content(invoice_1.total_price(invoice_1.id))
     expect(page).to have_content(417582.0)
   end
 end
