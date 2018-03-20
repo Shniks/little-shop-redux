@@ -11,7 +11,6 @@
          click_button("Submit")
 
          expect(page).to have_content("super toy")
-         expect(page).to have_content("its fun")
          expect(page).to have_content(2)
 
        end
@@ -32,9 +31,7 @@
           click_button("Submit")
 
           expect(page).to have_content("terminator")
-          expect(page).to have_content("death")
           expect(page).to have_content(1000)
-
         end
       end
     end
