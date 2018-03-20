@@ -1,5 +1,8 @@
-<div class="card-2">
-  <div class="container-2">
+<div class='merchant-header'>
+<h1><font color="white">Invoice:<%= invoice.id %>-<%= invoice.status %></font><br></h1>
+</div>
+<div class="card-invoice_edit">
+  <div class="container-invoice_edit">
     <form action="/invoices/<%= invoice.id %>" method='POST'>
       <h2>Edit Invoice</h2>
       <p> Invoice: <%= invoice.id %> </p>
@@ -9,7 +12,35 @@
       <label style='padding-right: 74px;'>Status</label><input type="text" name='invoice[status]' style='width: 300px;' class='input' value="<%= invoice.status %>"/><br/>
       <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= invoice.created_at %>"/><br/>
       <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= invoice.updated_at %>"/><br/>
+          <button onclick="goBack()">Cancel</button>
       <input id="submit-button" type='submit' value="Submit"/>
     </form>
   </div>
+</div>
+<div class="invoice-box">
+<p>Item-ID Item-Title Quantity Unit_Price</p>
+</div>
+<div class="merchant-line-1">
+  <% invoice.invoice_items.each do |invoice_item| %>
+  <div class="merchant-container-1">
+    <div class="work">
+    <div class="invoice-lines">
+<a    href="/items/<%= invoice_item.item_id %>"  style="color: rgb(255, 255, 255)"><%= invoice_item.item_id %></a>
+</div>
+<div class="invoice-lines-2">
+<%= invoice_item.item.name %>
+</div>
+<div class="invoice-lines-3">
+
+<%= invoice_item.quantity %>
+</div>
+<div class="invoice-lines-4">
+
+$<%= invoice_item.unit_price %>
+</div>
+</div>
+</div>
+
+</div>
+  <% end %>
 </div>
