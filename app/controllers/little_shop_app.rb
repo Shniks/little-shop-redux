@@ -94,7 +94,6 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/invoices/:id' do
-
     invoice = Invoice.find(params[:id])
     @total_price = invoice.total_price(invoice.id)
     id = invoice.merchant_id

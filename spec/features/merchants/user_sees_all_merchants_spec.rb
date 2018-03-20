@@ -28,14 +28,6 @@ describe 'As a user' do
       end
     end
 
-    it 'I can click on edit merchant' do
-      visit '/merchants'
-      within first('#drop-down') do
-        click_on('Edit a Merchant')
-        expect(current_path).to eq('/merchants')
-      end
-    end
-
     it 'I can click on view all merchants' do
       visit '/merchants'
       within first('#drop-down') do
