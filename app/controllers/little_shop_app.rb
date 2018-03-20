@@ -14,7 +14,7 @@ class LittleShopApp < Sinatra::Base
   post '/merchants' do
     merchant = Merchant.new(params[:merchant])
     merchant.save
-    redirect "/merchants/#{params[:id]}"
+    redirect "/merchants"
   end
 
   get '/merchants' do
@@ -34,7 +34,7 @@ class LittleShopApp < Sinatra::Base
 
   put '/merchants/:id' do |id|
     Merchant.update(id.to_i, params[:merchant])
-    redirect "/merchants/#{params[:merchant][:id]}"
+    redirect "/merchants/#{params[:id]}"
   end
 
   delete '/merchants/:id' do
@@ -83,7 +83,7 @@ class LittleShopApp < Sinatra::Base
     @item = Item.all
     erb :'items/dashboard'
   end
-  
+
   get '/invoices/new' do
     erb :'invoices/new'
   end
@@ -95,7 +95,7 @@ class LittleShopApp < Sinatra::Base
 
   get '/invoices/:id' do
     invoice = Invoice.find(params[:id])
-    @total_price = Invoice.total_price
+    @total_price = invoice.total_price(invoice.id)
     erb :'invoices/show', :locals => { :invoice => invoice }
   end
 
