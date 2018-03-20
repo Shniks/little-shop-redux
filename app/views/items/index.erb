@@ -1,6 +1,6 @@
 <% items.each do |item| %>
   <div class="card-merchant">
-    <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
+    <img src="<%= item.image %>" alt="Ruby" height="100" width="100">
   <div class="container-merchant">
    <a    href="/items/<%= item.id %>"  style="color: rgb(255, 255, 255)"><%= item.name %></a>
 
