@@ -127,8 +127,12 @@
  }
 
  .new{
-   background-color: #669999;
+   background-color: white;
    font: italic bold 16px/30px Georgia, serif;
+   width: 400px;
+   height: 300px;
+   margin-top: 200px;
+   margin-left: 550px;
  }
 .buttons {
   color: #ffd11a;
@@ -460,4 +464,20 @@ color:#ffffff;
 
 a {
     color: white;
+}
+
+
+.container-new-merchant{
+  transition: 0.3s;
+  position: absolute;
+  left:470px;
+  margin-top: 150px;
+  border-style: solid;
+   border-color: #763a47;
+  background-color:#753a47;
+  display: inline-block;
+  width: 500px;
+  height: 200px;
+   font: italic bold 16px/30px Aclonica, serif;
+   text-align: center;
 }
