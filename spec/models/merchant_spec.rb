@@ -82,8 +82,8 @@ RSpec.describe Merchant do
       item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 2)
       invoice_item_2 = InvoiceItem.create!(item_id: 3, invoice_id: 1, quantity: 108, unit_price: 444)
 
-      expect(Merchant.merchant_with_highest_price_item).to eq('Nikhil')
-      expect(Merchant.merchant_with_highest_price_item).to_not eq('Tyler')
+      expect(Merchant.merchant_with_highest_price_item.name).to eq('Nikhil')
+      expect(Merchant.merchant_with_highest_price_item.name).to_not eq('Tyler')
     end
 
     it 'Builds an array of merchant names and item counts' do

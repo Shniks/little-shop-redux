@@ -31,7 +31,6 @@ class Merchant < ActiveRecord::Base
 
   def self.merchant_with_highest_price_item
     merchant = Merchant.find(find_merchant_id_from_price)
-    merchant.name
   end
 
   def self.merchants_with_quantity
