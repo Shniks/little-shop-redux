@@ -229,12 +229,13 @@
   transition: 0.3s;
   position: absolute;
   left:550px;
+  height: 350px;
   margin-top: 150px;
   border-style: solid;
    border-color: #763a47;
   background-color:#753a47;
   display: inline-block;
-  width: 300px;
+  width: 260px;
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
 }
@@ -416,12 +417,13 @@ color:#ffffff;
 
 .merchant-header {
   background-color: #763a47;
-  width: 1100px;
-  height: 220px;
-  margin-left: 150px;
+
+
   margin-top: 100px;
   text-align: center;
   font-size: 100px;
+  display:block;
+
   border-top-left-radius:15px;
   border-bottom-left-radius:15px;
   border-top-right-radius:15px;
@@ -509,22 +511,20 @@ a {
 margin-bottom: 10px;
   font: 16px/30px Aclonica, serif;
   width: 100%;
+  display:inline-block;
+
 }
 
-.myButton-invoice {
-	background-color:#753a47;
+.merchant-container-1 p {
+  display: inline-block;
 
-	border:1px solid  black;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-   margin-right: 45px;
-   height: 20px;
+margin-left: 110px;
+}
+
+
+
+.myButton-invoice {
+
    float: right;
    margin-top: 30px;
 
@@ -541,12 +541,81 @@ margin-bottom: 10px;
 fieldset { border:0px;}
 
 .me-invoice {
-padding: 0;
-border: none;
-background: none;
-font-family:Arial;
-text-shadow:0px 1px 0px #2f6627;
-font-size:17px;
-color:#ffffff;
+
+
+}
+
+.invoice-lines{
+  margin-left: 200px;
+  text-align: left;
+  display: inline-block;
+
+}
+
+
+.invoice-lines-2{
+  margin-left: 100px;
+  text-align: left;
+  display: inline-block;
+}
+
+
+.invoice-lines-3{
+text-align: right;
+display: inline-block;
+  margin-left: 100px;
+
+
+}
+
+
+.invoice-lines-4{
+text-align: right;
+
+margin-right: 170px;
+
+
+}
+
+.card-invoice_edit{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+   margin-left: 230px;
+  margin-top: 40px;
+  width: 600px;
+  align-content: : center;
+
+
+
+}
+
+.container-invoice_edit {
+  text-align: center;
+  transition: 0.3s;
+  position: center;
+  border-style: solid;
+   border-color: #763a47;
+  background-color:#cb8f7a;
+  margin-left: 70px;
+   font: italic bold 16px/30px Aclonica, serif;
+     width: 800px;
+     align-content: : center;
+
+}
+
+
+.container-item{
+  transition: 0.3s;
+  position: absolute;
+  left:350px;
+  margin-top: 150px;
+  border-style: solid;
+   border-color: #763a47;
+  background-color:#753a47;
+  display: inline-block;
+  width: 700px;
+   font: italic bold 16px/30px Aclonica, serif;
+   text-align: center;
 
 }
