@@ -14,7 +14,7 @@ class LittleShopApp < Sinatra::Base
   post '/merchants' do
     merchant = Merchant.new(params[:merchant])
     merchant.save
-    redirect '/merchants'
+    redirect "/merchants/#{params[:id]}"
   end
 
   get '/merchants' do
@@ -28,8 +28,8 @@ class LittleShopApp < Sinatra::Base
   end
 
   get '/merchants/:id/edit' do
-    merchant = Merchant.find(params[:id])
-    erb :'merchants/edit', locals: {merchant: merchant}
+    @merchant = Merchant.find(params[:id])
+    erb :'merchants/edit'
   end
 
   put '/merchants/:id' do |id|
