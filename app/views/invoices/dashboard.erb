@@ -1,30 +1,30 @@
-<h1 id="merchant-dashboard-header">Invoices Dashboard</h1>
+<h1 id="dashboard-header">Invoices Dashboard</h1>
+<div class="invoice-dashboard">
+  <div class="invoice-container-dashboard">
+    <h2> Status Percentages </h2>
+    <h3> Pending: <%= @invoices.status_pending %>%</h3>
+    <h3> Shipped: <%= @invoices.status_shipped %>%</h3>
+    <h3> Returned: <%= @invoices.status_returned %>%</h3>
+  </div>
 
-<div class="merchant-container-dashboard">
-  <h2> Status Percentages </h2>
-  <h3> Pending: <%= @invoices.status_pending %>%</h3>
-  <h3> Shipped: <%= @invoices.status_shipped %>%</h3>
-  <h3> Returned: <%= @invoices.status_returned %>%</h3>
-</div>
+  <div class="invoice-container-dashboard">
+    <h2>Unit Prices</h2>
+    <h3> Highest Invoice:</h3>
+      <h4><% highest_price_invoice = @invoices.highest_price.first %>
+      <a href="/invoices/<%= highest_price_invoice.invoice_id %>"><%= highest_price_invoice.invoice_id %></a></h4>
+    <h3> Lowest Invoice:</h3>
+      <h4><%lowest_price_invoice = @invoices.lowest_price.first %>
+        <a href="/invoices/<%= lowest_price_invoice.invoice_id %>"><%= lowest_price_invoice.invoice_id %></a></h4>
+  </div>
 
-<div class="merchant-container-dashboard">
-  <h2>Unit Prices</h2>
-  <h3> Highest </h3>
-    Invoice:  <% highest_price_invoice = @invoices.highest_price.first %>
-    <a href="/invoices/<%= highest_price_invoice.invoice_id %>"><%= highest_price_invoice.invoice_id %></a>
-  <h3> Lowest </h3>
-    Invoice: <%lowest_price_invoice = @invoices.lowest_price.first %>
-      <a href="/invoices/<%= lowest_price_invoice.invoice_id %>"><%= lowest_price_invoice.invoice_id %></a>
-</div>
+  <div class="invoice-container-dashboard">
+    <h2>Quantity</h2>
+    <h3> Highest Invoice: </h3>
+      <h4><% highest_quantity_invoice = @invoices.highest_quantity %>
+      <a href="/invoices/<%= highest_quantity_invoice.invoice_id %>"><%= highest_quantity_invoice.invoice_id %></a></h4>
+    <h3> Lowest Invoice: </h3>
+      <h4><% lowest_quantity_invoice = @invoices.lowest_quantity %>
+    <a href="/invoices/<%= lowest_quantity_invoice.invoice_id %>"><%= lowest_quantity_invoice.invoice_id %></a></h4>
 
-<div class="merchant-container-dashboard">
-  <h2>Quantity</h2>
-
-  <h3> Highest </h3>
-    Invoice:  <% highest_quantity_invoice = @invoices.highest_quantity %>
-    <a href="/invoices/<%= highest_quantity_invoice.invoice_id %>"><%= highest_quantity_invoice.invoice_id %></a>
-  <h3> Lowest </h3>
-  Invoice:  <% lowest_quantity_invoice = @invoices.lowest_quantity %>
-  <a href="/invoices/<%= lowest_quantity_invoice.invoice_id %>"><%= lowest_quantity_invoice.invoice_id %></a>
-
+  </div>
 </div>
