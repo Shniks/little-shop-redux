@@ -27,6 +27,20 @@ class Invoice < ActiveRecord::Base
 
   def self.lowest_quantity
     lowest_quantity_invoice = InvoiceItem.minimum('quantity')
-    InvoiceItem.where(quantity: lowest_quantity_invoice).first
+    InvoiceItem.where(quantity: lowest_quantity_invoice).last
+  end
+
+  def self.status_pending
+    pending_status = Invoice.where(status: 'pending').count.to_f
+    ( (pending_status / Invoice.all.count) * 100 ).round
+  end
+
+  def self.status_shipped
+    shipped_status = Invoice.where(status: 'shipped').count.to_f
+    ( (shipped_status / Invoice.all.count) * 100 ).round
+  end
+
+  def self.status_returned
+    100 - status_pending - status_shipped
   end
 end

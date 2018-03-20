@@ -2,6 +2,9 @@
 
 <div class="merchant-container-dashboard">
   <h2> Status Percentages </h2>
+  <h3> Pending: <%= @invoices.status_pending %>%</h3>
+  <h3> Shipped: <%= @invoices.status_shipped %>%</h3>
+  <h3> Returned: <%= @invoices.status_returned %>%</h3>
 </div>
 
 <div class="merchant-container-dashboard">
@@ -18,7 +21,10 @@
   <h2>Quantity</h2>
 
   <h3> Highest </h3>
-
+    Invoice:  <% highest_quantity_invoice = @invoices.highest_quantity %>
+    <a href="/invoices/<%= highest_quantity_invoice.invoice_id %>"><%= highest_quantity_invoice.invoice_id %></a>
   <h3> Lowest </h3>
+  Invoice:  <% lowest_quantity_invoice = @invoices.lowest_quantity %>
+  <a href="/invoices/<%= lowest_quantity_invoice.invoice_id %>"><%= lowest_quantity_invoice.invoice_id %></a>
 
 </div>
