@@ -1,5 +1,20 @@
-<div class="card">
-  <div class="container">
+<div class='merchant-header'>
+<h1><font color="white"><%= @item.name %></font><br></h1>
+<div class="myButton-merchant">
+  <form action="/items/<%= @item.id %>" method="POST">
+    <input type="hidden" name="_method" value="delete"/>
+    <input id="submit" type="submit"  class="me" value="Delete"/>
+  </form>
+</div>
+<a id="submit" class="myButton-merchant" href="/items/<%= @item.id %>/edit">Edit</a>
+</div>
+</div>
+
+
+<div class="container-item">
+  <div class="item-image">
+    <img src="https://i.imgur.com/QdslH7j.png" alt="Ruby" height="100" width="100">
+  </div>
     Id   /   <%= @item.id %><br>
     Item  /  <%= @item.name %><br>
     Description  /  <%= @item.description %><br>
@@ -8,4 +23,5 @@
     Created-at  /  <%= @item.created_at %><br>
     Updated-at  /  <%= @item.updated_at %><br>
   </div>
+</div>
 </div>
