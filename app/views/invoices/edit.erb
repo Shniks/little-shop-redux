@@ -1,18 +1,25 @@
 <div class='merchant-header'>
-<h1><font color="white">Invoice:<%= invoice.id %>-<%= invoice.status %></font><br></h1>
+<h1><font color="white">Invoice:<%= @invoice.id %>-<%= @invoice.status %></font><br></h1>
 </div>
 <div class="back-2">
 <div class="card-invoice_edit">
   <div class="container-invoice_edit">
-    <form action="/invoices/<%= invoice.id %>" method='POST'>
+    <form action="/invoices/<%= @invoice.id %>" method='POST'>
       <h2>Edit Invoice</h2>
-      <p> Invoice: <%= invoice.id %> </p>
+      <p> Invoice: <%= @invoice.id %> </p>
       <input type='hidden' name='_method' class='input' value='PATCH' /><br/>
-      <label style='padding-right: 30px;'>Customer ID</label><input type="number" name='invoice[customer_id]' style='width: 300px;' class='input' value="<%= invoice.customer_id %>"/><br/>
-      <label style='padding-right: 31px;'>Merchant ID</label><input type="number" name='invoice[merchant_id]' style='width: 300px;' class='input' value="<%= invoice.merchant_id %>"/><br/>
-      <label style='padding-right: 74px;'>Status</label><input type="text" name='invoice[status]' style='width: 300px;' class='input' value="<%= invoice.status %>"/><br/>
-      <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= invoice.created_at %>"/><br/>
-      <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= invoice.updated_at %>"/><br/>
+      Merchant:<select name="invoice[merchant_id]">
+        <% @merchants.each do |merchant| %>
+        <option value= "<%=merchant.id%>"> <%=merchant.name %> </option>
+      <% end %>
+      </select><br>
+      Status:<select name="invoice[status]">
+        <option value= "<%=@invoice.status%>"> returned </option>
+            <option value= "<%=@invoice.status%>"> shipped </option>
+                <option value= "<%=@invoice.status%>"> pending </option>
+      </select><br>
+      <input type="hidden" name='invoice[created_at]' style='width: 300px;' class='input' value="<%= @invoice.created_at %>"/><br/>
+      <input type="hidden" name='invoice[updated_at]' style='width: 300px;' class='input' value="<%= @invoice.updated_at %>"/><br/>
           <button onclick="goBack()">Cancel</button>
       <input id="submit-button" type='submit' value="Submit"/>
     </form>
@@ -23,7 +30,7 @@
 <p>Item-ID Item-Title Quantity Unit_Price</p>
 </div>
 <div class="merchant-line-1">
-  <% invoice.invoice_items.each do |invoice_item| %>
+  <% @invoice.invoice_items.each do |invoice_item| %>
   <div class="merchant-container-1">
     <div class="work">
     <div class="invoice-lines">
