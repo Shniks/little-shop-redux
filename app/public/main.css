@@ -240,12 +240,13 @@
   width: 260px;
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
+    border:1px solid white;
 }
 
 .container-edit-3{
   transition: 0.3s;
   position: absolute;
-  left:550px;
+  left:180px;
   height: 350px;
   margin-top: 25px;
   border-style: solid;
@@ -256,6 +257,7 @@
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
    box-shadow: 10px 10px 5px grey;
+    border:1px solid white;
 }
 
 
@@ -273,6 +275,7 @@
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
      box-shadow: 10px 10px 5px grey;
+      border:1px solid white;
 }
 
 
@@ -355,9 +358,9 @@ color:#ffffff;
 }
 
 #dashboard-header{
-  font-family: helvetica;
-  border: 3px solid grey;
-  background-color: whitesmoke;
+  font: italic bold 16px/30px Aclonica, serif;
+  border: 3px solid white;
+  background-color: #763a47;
   font-size: 50px;
   margin-top: 100px;
   padding: 40px;
@@ -547,10 +550,6 @@ color:#ffffff;
   font-size: 100px;
   display:block;
 
-  border-top-left-radius:15px;
-  border-bottom-left-radius:15px;
-  border-top-right-radius:15px;
-  border-bottom-right-radius:15px;
 
 
 }
@@ -591,6 +590,7 @@ a {
 
   height: 300px;
   background-color: #cb8f7a;
+   border:1px solid white;
 
 
 
@@ -602,6 +602,7 @@ a {
   background-color: #cb8f7a;
   margin-left: 370px;
   margin-top: 120px;
+   border:1px solid white;
 
 
 }
@@ -620,13 +621,14 @@ a {
   height: 200px;
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
+    border:1px solid white;
 }
 
 .container-new-merchant-1{
    box-shadow: 10px 10px 5px grey;
   transition: 0.3s;
   position: absolute;
-  left:470px;
+  left:100px;
   margin-top: 50px;
   border-style: solid;
    border-color: #763a47;
@@ -636,6 +638,7 @@ a {
   height: 200px;
    font: italic bold 16px/30px Aclonica, serif;
    text-align: center;
+    border:1px solid white;
 
 }
 
@@ -645,6 +648,7 @@ a {
   background-color: #cb8f7a;
   margin-left: 370px;
   margin-top: 175px;
+   border:1px solid white;
 
 
 }
@@ -656,6 +660,7 @@ a {
   background-color:    #cb8f7a;
   margin-left: 37px;
   margin-bottom: 30px;
+   border:1px solid white;
 
 
 
@@ -665,6 +670,7 @@ a {
 
   height: 380px;
   background-color:    #cb8f7a;
+   border:1px solid white;
 
 
 
@@ -796,6 +802,7 @@ margin-right: 170px;
      width: 800px;
 
      align-content: : center;
+      border:1px solid white;
 
 
 }
@@ -938,4 +945,11 @@ margin-right: 170px;
   font-family: helvetica;
   text-align: left;
   font-size: 16px;
+}
+
+
+.wrap-it-up{
+  width: 100%;
+  height: 150px;
+  background-color: #763a47;
 }
