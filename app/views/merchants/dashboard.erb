@@ -1,4 +1,5 @@
 <h1 id="dashboard-header">Merchants Dashboard</h1>
+<div class="wrap-it-up">
 <div>
   <h3 id="merchant-dashboard-header-1">Merchant With Most Items:</h3>
   <h3 id="merchant-dashboard-header-2">Merchant With Highest Price Item:</h3>
@@ -6,6 +7,7 @@
 <div>
   <h3 id="merchant-dashboard-header-3"><a href = "/merchants/<%= high_quantity_id %>"><%= Merchant.merchant_with_highest_quantity["name"]%></a></h3>
   <h3 id="merchant-dashboard-header-4"><a href = "/merchants/<%= highest_price_id %>"><%= Merchant.merchant_with_highest_price_item["name"]%></a></h3>
+</div>
 </div>
 <div class="merchants-dashboard">
   <% merchants.each do |merchant| %>
