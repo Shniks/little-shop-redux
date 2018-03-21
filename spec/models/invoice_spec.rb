@@ -3,7 +3,7 @@ require './app/models/invoice_item.rb'
 require './app/models/item.rb'
 
 RSpec.describe Invoice do
-  describe 'Class Methods' do
+  describe 'Instance Methods' do
     before(:each) do
       invoice_1 = Invoice.create!(customer_id: 28, merchant_id: 8, status: 'pending')
       item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 8)
@@ -35,7 +35,27 @@ RSpec.describe Invoice do
       invoice_item_3 = invoice_2.invoice_items.create!(item_id: 1, invoice_id: 2, quantity: 200, unit_price: 20)
       invoice_item_4 = invoice_2.invoice_items.create!(item_id: 2, invoice_id: 2, quantity: 66, unit_price: 55)
 
-      expect(invoice_1.total_price(1)).to eq(417582.0)
+      expect(invoice_1.total_price).to eq(417582.0)
+    end
+  end
+
+  describe 'Class Methods' do
+    before(:each) do
+      invoice_1 = Invoice.create!(customer_id: 28, merchant_id: 8, status: 'pending')
+      item_1 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 555, merchant_id: 8)
+      item_2 = Item.create!(name: 'Cup', description: 'container', unit_price: 444, merchant_id: 8)
+      invoice_item_1 = invoice_1.invoice_items.create!(item_id: 1, invoice_id: 1, quantity: 666, unit_price: 555)
+      invoice_item_2 = invoice_1.invoice_items.create!(item_id: 2, invoice_id: 1, quantity: 108, unit_price: 444)
+
+      invoice_2 = Invoice.create!(customer_id: 50, merchant_id: 10, status: 'pending')
+      item_3 = Item.create!(name: 'mjolnir', description: 'hammer', unit_price: 20, merchant_id: 4)
+      item_4 = Item.create!(name: 'Cup', description: 'container', unit_price: 55, merchant_id: 4)
+      invoice_item_3 = invoice_2.invoice_items.create!(item_id: 1, invoice_id: 2, quantity: 200, unit_price: 20)
+      invoice_item_4 = invoice_2.invoice_items.create!(item_id: 2, invoice_id: 2, quantity: 66, unit_price: 55)
+    end
+
+    after(:each) do
+      DatabaseCleaner.clean
     end
 
     it 'Finds the invoice with highest unit price' do

@@ -1,15 +1,13 @@
 class Invoice < ActiveRecord::Base
-  has_many  :invoice_items
-  has_many :items, through: :invoice_items
-  belongs_to :merchant
-  validates :customer_id, presence: true
-  validates :merchant_id, presence: true
-  validates :status, presence: true
+  has_many    :invoice_items
+  has_many    :items, through: :invoice_items
+  belongs_to  :merchant
+  validates   :customer_id, presence: true
+  validates   :merchant_id, presence: true
+  validates   :status, presence: true
 
-  def total_price(id)
-    invoice = Invoice.find(id)
-    invoiceitems = invoice.invoice_items
-    invoiceitems.sum("quantity * unit_price")
+  def total_price
+    invoice_items.sum("quantity * unit_price")
   end
 
   def self.highest_price

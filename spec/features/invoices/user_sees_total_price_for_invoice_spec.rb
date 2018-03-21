@@ -23,7 +23,7 @@ RSpec.describe "User sees total price for an invoice" do
 
     visit "/invoices/#{@invoice_1.id}"
 
-    expect(page).to have_content(@invoice_1.total_price(@invoice_1.id))
+    expect(page).to have_content(@invoice_1.total_price)
     expect(page).to have_content(417582.0)
   end
 end
