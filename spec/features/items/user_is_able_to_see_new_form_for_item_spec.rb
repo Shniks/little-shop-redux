@@ -1,4 +1,4 @@
-
+describe 'As a User' do
   describe 'User visits items/new'  do
     it 'User sees the form for a new item'  do
 
@@ -10,3 +10,4 @@
       expect(page).to have_button("Submit")
     end
   end
+end

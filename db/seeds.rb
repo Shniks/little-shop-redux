@@ -6,7 +6,6 @@ require_relative '../app/models/invoice_item.rb'
 
 ActiveRecord::Base.connection.reset_pk_sequence!(:table_name)
 
-
 CSV.foreach('data/merchants.csv', headers: true, header_converters: :symbol, converters: :numeric) do |row|
   Merchant.create(row.to_hash)
 end

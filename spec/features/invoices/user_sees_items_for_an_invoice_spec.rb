@@ -1,7 +1,6 @@
 require './app/models/invoice.rb'
 require './app/models/item.rb'
 
-
 RSpec.describe "User sees a list of items" do
   before(:each) do
     @merchant1 = Merchant.create(id: 1, name: 'Tyler')

@@ -107,7 +107,6 @@ class LittleShopApp < Sinatra::Base
     erb :'invoices/edit'
   end
 
-
   patch '/invoices/:id' do
     invoice = Invoice.find(params[:id])
     invoice.update(params[:invoice])

@@ -25,6 +25,5 @@
     <h3> Lowest Invoice: </h3>
       <h4><% lowest_quantity_invoice = @invoices.lowest_quantity %>
     <a href="/invoices/<%= lowest_quantity_invoice.invoice_id %>"><%= lowest_quantity_invoice.invoice_id %></a></h4>
-
   </div>
 </div>

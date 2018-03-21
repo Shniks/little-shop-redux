@@ -1,5 +1,5 @@
-describe 'Merchant Dashboard' do
-  context 'I can visit the merchant dashboard' do
+describe 'As a User' do
+  context 'I visit the merchant dashboard' do
     before(:each) do
       @merchant1 = Merchant.create(name: 'Tyler')
       @merchant2 = Merchant.create(name: 'Nikhil')
@@ -24,9 +24,6 @@ describe 'Merchant Dashboard' do
       item_4 = Item.create!(name: 'Cup', description: 'container', unit_price: 55, merchant_id: 2)
       invoice_item_3 = invoice_2.invoice_items.create!(item_id: 1, invoice_id: 2, quantity: 200, unit_price: 20)
       invoice_item_4 = invoice_2.invoice_items.create!(item_id: 2, invoice_id: 2, quantity: 66, unit_price: 55)
-
-
-
 
       visit '/merchants-dashboard'
 

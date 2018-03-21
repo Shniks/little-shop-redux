@@ -2,7 +2,6 @@ require './app/models/invoice.rb'
 require './app/models/item.rb'
 require './app/models/merchant.rb'
 
-
 RSpec.describe "User sees total price for an invoice" do
   before(:each) do
     @merchant1 = Merchant.create(id: 1, name: 'Tyler')

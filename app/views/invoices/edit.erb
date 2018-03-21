@@ -1,5 +1,5 @@
 <div class='merchant-header animated flipInY'>
-<h1><font color="white">Invoice: <%= @invoice.id %>-<%= @invoice.status %></font><br></h1>
+  <h1><font color="white">Invoice: <%= @invoice.id %>-<%= @invoice.status %></font><br></h1>
 </div>
 <div class="back-2 animated flipInY" >
 <div class="card-invoice_edit">
@@ -27,7 +27,7 @@
 </div>
 </div>
 <div class="invoice-box">
-<p>Item-ID Item-Title Quantity Unit_Price</p>
+  <p>Item-ID Item-Title Quantity Unit_Price</p>
 </div>
 <div class="merchant-line-1">
   <% @invoice.invoice_items.each do |invoice_item| %>
@@ -40,16 +40,13 @@
 <%= invoice_item.item.name %>
 </div>
 <div class="invoice-lines-3">
-
 <%= invoice_item.quantity %>
 </div>
 <div class="invoice-lines-4">
-
 $<%= invoice_item.unit_price %>
 </div>
 </div>
 </div>
-
 </div>
   <% end %>
 </div>

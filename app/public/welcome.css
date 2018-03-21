@@ -5,22 +5,13 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
-/* div.a {
-    font-size: 150px;
-    color: white;
-margin-left: 150px;
-} */
 .a {
   font-size: 150px;
   color: white;
-display: inline-block;
- font: italic bold 16px/30px Aclonica, serif;
-
-
-  /* justify-content: space-around; */
+  display: inline-block;
+  font: italic bold 16px/30px Aclonica, serif;
 }
 
 .myButton {
@@ -34,19 +25,18 @@ display: inline-block;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:40px;
-
 	padding:40px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
   margin-top: 260px;
   margin-left: 120px;
-
 }
+
 .myButton:hover {
 	background-color:#caa26d;
 }
-.myButton:active {
 
+.myButton:active {
 	top:1px;
 }
 

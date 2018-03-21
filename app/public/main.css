@@ -3,13 +3,13 @@
 
        background-color: black;
        width: 100%;
-
   }
 
  .header {
    overflow: hidden;
    width: 100%;
  }
+
  .nav{
    position: absolute;
    background-color:#763a47;
@@ -40,7 +40,6 @@
      float: right;
      overflow: hidden;
      left: 200px;
-
  }
 
  .dropdown-1 {
@@ -48,7 +47,6 @@
      overflow: hidden;
      left: 200px;
      margin-right: 50px;
-
  }
 
  .dropdown .dropbtn {
@@ -61,7 +59,6 @@
      font: inherit;
      margin: 0;
  }
-
 
   .dropdown-1 .dropbtn {
       font-size: 16px;
@@ -105,14 +102,12 @@
  }
 
  .header {
-
   width: 100%;
 }
 
  .dropdown:hover .dropdown-content {
      display: block;
  }
-
 
   .dropdown-1:hover .dropdown-content {
       display: block;
@@ -123,7 +118,6 @@
    bottom: 8px;
    border-color: coral;
    background: linear-gradient(to right, #669999 , #fff0b3);
-
  }
 
  .new{
@@ -134,6 +128,7 @@
    margin-top: 200px;
    margin-left: 550px;
  }
+
 .buttons {
   color: #ffd11a;
 }
@@ -142,11 +137,9 @@
   margin-top: 50px;
 }
 
-
 .invoice-div {
   margin-top: 50px;
 }
-
 
 .merchant-div {
   margin-top: 50px;
@@ -159,10 +152,7 @@
     background-color: #e8c29f;
     margin-top: 75px;
    width: 100%;
-
-
 }
-
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -175,9 +165,6 @@
   background-color: #763a47;
   display: inline-block;
    font: italic bold 16px/30px Aclonica, serif;
-
-
-
 }
 
 .card-2{
@@ -188,9 +175,6 @@
   margin-top: 200px;
   width: 600px;
   align-content: : center;
-
-
-
 }
 
 .container-2 {
@@ -203,9 +187,7 @@
    font: italic bold 16px/30px Aclonica, serif;
      width: 600px;
      align-content: : center;
-
 }
-
 
 .merchant-line{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -224,7 +206,6 @@
   font: 16px/30px Aclonica, serif;
   width: 100%;
   border:1px solid white;
-
 }
 
 .container-edit{
@@ -260,7 +241,6 @@
     border:1px solid white;
 }
 
-
 .container-edit-new{
   transition: 0.3s;
   position: absolute;
@@ -277,7 +257,6 @@
      box-shadow: 10px 10px 5px grey;
       border:1px solid white;
 }
-
 
 .myButton {
 	background-color:#753a47;
@@ -297,8 +276,6 @@
    border:1px solid white;
    box-shadow: 10px 10px 5px grey;
 }
-}
-
 
 .myButton-2 {
 	background-color:#753a47;
@@ -320,13 +297,10 @@
   box-shadow: 10px 10px 5px grey;
 }
 
-
-
-
-}
 .myButton:hover {
 	background-color:#ebb074;
 }
+
 .myButton:active {
 	position:relative;
 	top:1px;
@@ -426,16 +400,11 @@ color:#ffffff;
     display: inline-block;
     margin-right: 20px;
     background-color: #E2E2E2;
-
-
-
 }
 
 
 .container-3 {
     padding: 2px 16px;
-
-
 }
 
 #new-merch-button {
@@ -450,10 +419,8 @@ color:#ffffff;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-
   height: 20px;
   float: center;
-
 }
 
 #new-merch-button:hover {
@@ -464,7 +431,6 @@ color:#ffffff;
 	position:relative;
 	top:1px;
 }
-
 
 #new-merch-button-1 {
 	background-color:#753a47;
@@ -478,10 +444,8 @@ color:#ffffff;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-
   height: 40px;
   float: center;
-
 }
 
 #new-merch-button-1:hover {
@@ -502,8 +466,6 @@ color:#ffffff;
       margin-right: 20px;
       background-color: #E2E2E2;
       margin-top: 100px;
-
-
 }
 ​
 .card-merchant:hover {
@@ -512,10 +474,7 @@ color:#ffffff;
 ​
 .container-merchant {
     padding: 2px 16px;
-
-
 }
-
 
 .card-merchant {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -527,11 +486,7 @@ color:#ffffff;
        text-align: center;
        margin-left: 130px;
        border:1px solid white;
-
-
-
 }
-
 
 .container-merchant {
     height: 66px;
@@ -549,11 +504,7 @@ color:#ffffff;
   text-align: center;
   font-size: 100px;
   display:block;
-
-
-
 }
-
 
 .myButton-merchant {
 	background-color:#db8a61;
@@ -568,32 +519,24 @@ color:#ffffff;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
   display: flex;
- align-items: center;
- justify-content: center;
+  align-items: center;
+  justify-content: center;
    height: 20px;
    margin-top: 10px;
    border-top-left-radius:15px;
    border-bottom-left-radius:15px;
    border-top-right-radius:15px;
    border-bottom-right-radius:15px;
-
-
-
-
-
 }
 
 a {
     color: white;
 }
-.back{
 
+.back{
   height: 300px;
   background-color: #cb8f7a;
    border:1px solid white;
-
-
-
 }
 
 .back4{
@@ -603,8 +546,6 @@ a {
   margin-left: 370px;
   margin-top: 120px;
    border:1px solid white;
-
-
 }
 
 .container-new-merchant{
@@ -649,8 +590,6 @@ a {
   margin-left: 370px;
   margin-top: 175px;
    border:1px solid white;
-
-
 }
 
 
@@ -661,24 +600,13 @@ a {
   margin-left: 37px;
   margin-bottom: 30px;
    border:1px solid white;
-
-
-
 }
 
 .back-3{
-
   height: 380px;
   background-color:    #cb8f7a;
    border:1px solid white;
-
-
-
-
-
 }
-
-
 
 .invoice-box{
   height: 50px;
@@ -691,9 +619,7 @@ a {
 .invoice-box p{
    word-spacing: 240px;
  font: italic bold 16px/30px Aclonica, serif;
-
 }
-
 
 .merchant-line-1{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -708,11 +634,10 @@ a {
   border-style: solid;
   border-color: #763a47;
   background-color:#cb8f7a;
-margin-bottom: 10px;
+  margin-bottom: 10px;
   font: 16px/30px Aclonica, serif;
   width: 100%;
   display:inline-block;
-
 }
 
 .merchant-container-1 p {
@@ -721,18 +646,15 @@ margin-bottom: 10px;
 margin-left: 110px;
 }
 
-
-
 .myButton-invoice {
-
    float: right;
    margin-top: 30px;
-
 }
 
 .myButton-invoice:hover {
 	background-color:#ebb074;
 }
+
 .myButton-invoice:active {
 	position:relative;
 	top:1px;
@@ -740,18 +662,11 @@ margin-left: 110px;
 
 fieldset { border:0px;}
 
-.me-invoice {
-
-
-}
-
 .invoice-lines{
   margin-left: 200px;
   text-align: left;
   display: inline-block;
-
 }
-
 
 .invoice-lines-2{
   margin-left: 100px;
@@ -759,34 +674,23 @@ fieldset { border:0px;}
   display: inline-block;
 }
 
-
 .invoice-lines-3{
 text-align: right;
 display: inline-block;
   margin-left: 100px;
-
-
 }
 
 
 .invoice-lines-4{
 text-align: right;
-
 margin-right: 170px;
-
-
 }
 
 .card-invoice_edit{
-
-
-   margin-left: 220px;
+  margin-left: 220px;
   margin-top: 40px;
   width: 600px;
   align-content: : center;
-
-
-
 }
 
 .container-invoice_edit {
@@ -795,18 +699,14 @@ margin-right: 170px;
   transition: 0.3s;
   position: center;
   border-style: solid;
-   border-color: #763a47;
+  border-color: #763a47;
   background-color:#763a47;
   margin-left: 70px;
-   font: italic bold 16px/30px Aclonica, serif;
-     width: 800px;
-
-     align-content: : center;
-      border:1px solid white;
-
-
+  font: italic bold 16px/30px Aclonica, serif;
+  width: 800px;
+  align-content: : center;
+  border:1px solid white;
 }
-
 
 .container-item{
   transition: 0.3s;
@@ -814,14 +714,14 @@ margin-right: 170px;
   left:350px;
   margin-top: 150px;
   border-style: solid;
-   border-color: #763a47;
+  border-color: #763a47;
   background-color:#753a47;
   display: inline-block;
   width: 700px;
-   font: italic bold 16px/30px Aclonica, serif;
-   text-align: center;
-
+  font: italic bold 16px/30px Aclonica, serif;
+  text-align: center;
 }
+
 .description{
   height: 60px;
 }
@@ -839,7 +739,6 @@ margin-right: 170px;
   margin-left: 22px;
   font: 16px/30px Aclonica, serif;
   border:1px solid white;
-
 }
 
 .merchant-container-dashboard a {
@@ -865,7 +764,6 @@ margin-right: 170px;
   margin-left: 100px;
   font: 16px/30px Aclonica, serif;
   border:1px solid white;
-
 }
 
 .item-container-dashboard h1 {
@@ -918,7 +816,6 @@ margin-right: 170px;
   margin-left: 100px;
   font: 16px/30px Aclonica, serif;
   border:1px solid white;
-
 }
 
 .invoice-container-dashboard h2 {
@@ -946,7 +843,6 @@ margin-right: 170px;
   text-align: left;
   font-size: 16px;
 }
-
 
 .wrap-it-up{
   width: 100%;

@@ -1,3 +1,4 @@
+describe 'As a User' do
   describe "User visits items dashboard"  do
     context "Visits [/items-dashboard]"  do
       it "They see total count of items"  do
@@ -65,3 +66,4 @@
       end
     end
   end
+end

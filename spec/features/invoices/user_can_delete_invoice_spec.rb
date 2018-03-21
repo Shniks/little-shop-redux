@@ -15,7 +15,6 @@ describe 'User can delete invoices' do
     @invoice_item_4 = @invoice_2.invoice_items.create!(item_id: 2, invoice_id: 2, quantity: 66, unit_price: 55)
   end
 
-
   describe 'User can delete an invoice' do
     it 'User deletes an invoice' do
       visit "/invoices/#{@invoice_1.id}"
