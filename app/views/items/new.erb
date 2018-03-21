@@ -1,8 +1,7 @@
 <h1 id="merchant-index-header">Create new item</h1>
-<div class="back-3 animated flipInY">
+<div class="back-3 ">
 <div class="container-edit-new">
-  <p>Enter a new item:</p>
-  <form action="/items" method="post">
+  Enter a Merchant<form action="/items" method="post">
     <select name="item[merchant_id]">
       <% @merchants.each do |merchant| %>
       <option value= "<%=merchant.id%>"> <%=merchant.name %> </option>
