@@ -3,14 +3,12 @@ class Merchant < ActiveRecord::Base
   has_many :invoices
   validates :name, presence: true
 
-  def self.total_items(id)
-    merchant = Merchant.find(id)
-    merchant.items.count
+  def total_items
+    items.count
   end
 
-  def self.average_price(id)
-    merchant = Merchant.find(id)
-    merchant.items.average(:unit_price)
+  def average_price
+    items.average(:unit_price)
   end
 
   def total_sales
