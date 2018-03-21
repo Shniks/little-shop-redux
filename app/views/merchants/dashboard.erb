@@ -14,11 +14,11 @@
     <div class="merchant-container-dashboard">
     <a href="/merchants/<%= merchant.id %>"  style="color: rgb(255, 255, 255)"><%= merchant.name %></a> <br>
     <h6>Item Count:</h6>
-    <%= Merchant.total_items(merchant.id) %>
+    <%= merchant.total_items %>
     <h6>Avg. Item Price:</h6>
-    <%= Merchant.average_price(merchant.id) %>
+    <%= merchant.average_price.round(2) %>
     <h6> Total Cost of Items:</h6>
-    <%= Merchant.total_sales(merchant.id) %>
+    <%= merchant.total_sales %>
     </div>
   <% end %>
 </div>
